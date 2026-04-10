@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "Read(//tmp/ui-ux-pro-max-skill/.claude/**)",
+      "Read(//tmp/**)",
+      "Read(//c/Users/Dev/.claude/skills/playwright-skill/**)",
+      "Bash(node -e \"require\\('./lib/helpers'\\).detectDevServers\\(\\).then\\(s => console.log\\(JSON.stringify\\(s, null, 2\\)\\)\\)\")",
+      "Bash(npx create-next-app@latest:*)",
+      "Bash(npx shadcn@latest:*)"
+    ]
+  }
+}
