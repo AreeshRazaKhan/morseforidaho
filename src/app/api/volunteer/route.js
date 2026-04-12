@@ -1,9 +1,12 @@
-import { postMultipleWebhooks, nowIso, yesNo } from '@/lib/ghl'
+import { nowIso, yesNo } from '@/lib/ghl'
 
-const WEBHOOK_UUIDS = [
-  '23834100-4e00-4579-82e7-f9ec69ed8542',
-  'df947411-0c7e-4a6c-8c2e-7f20291c333f',
-  '19e7758c-f5c5-44fa-a770-5c18cefa0645',
+// Three parallel webhooks per rule §2. Each triggers a different GHL
+// workflow. All three use the Morse account's location-scoped hook ID
+// (`BlWviZhz7Vyrg1cbGSYr`). Succeeds if any return 2xx.
+const WEBHOOK_URLS = [
+  'https://services.leadconnectorhq.com/hooks/BlWviZhz7Vyrg1cbGSYr/webhook-trigger/6bb08aa8-e17a-4594-aba5-e7b66178f2ab',
+  'https://services.leadconnectorhq.com/hooks/BlWviZhz7Vyrg1cbGSYr/webhook-trigger/f9ab8e9f-646d-4404-9e06-e79b11b6f249',
+  'https://services.leadconnectorhq.com/hooks/BlWviZhz7Vyrg1cbGSYr/webhook-trigger/dce7c6fe-1b1c-4870-b162-b050c9d7c88a',
 ]
 
 export const POST = async (req) => {
@@ -44,7 +47,15 @@ export const POST = async (req) => {
       submitted_at: nowIso(),
     }
 
-    const results = await postMultipleWebhooks(WEBHOOK_UUIDS, payload)
+    const results = await Promise.all(
+      WEBHOOK_URLS.map((url) =>
+        fetch(url, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload),
+        }).catch((err) => ({ ok: false, err }))
+      )
+    )
     const anySuccess = results.some((r) => r && r.ok)
     if (!anySuccess) {
       console.error('[api/volunteer] all webhooks failed')

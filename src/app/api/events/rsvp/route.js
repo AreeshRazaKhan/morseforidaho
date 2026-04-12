@@ -1,5 +1,4 @@
 import {
-  postWebhook,
   nowIso,
   yesNo,
   fetchGHLEvent,
@@ -7,7 +6,10 @@ import {
   createGhlAppointment,
 } from '@/lib/ghl'
 
-const WEBHOOK_UUID = 'b8b53720-18c4-4cde-9db9-c549de6264ee'
+// Full URL hardcoded — Morse account uses a location-scoped hook ID
+// (`BlWviZhz7Vyrg1cbGSYr`) rather than the template default.
+const WEBHOOK_URL =
+  'https://services.leadconnectorhq.com/hooks/BlWviZhz7Vyrg1cbGSYr/webhook-trigger/aee1c5b3-f9d1-4187-b8d8-f66626d5cecc'
 
 export const POST = async (req) => {
   try {
@@ -34,9 +36,9 @@ export const POST = async (req) => {
       phone: (data.phone || '').trim(),
       eventName: event.title,
       eventDate: `${event.date.month} ${event.date.day}, ${event.date.year}`,
-      eventTime: event.endTime
-        ? `${event.time} – ${event.endTime}`
-        : event.time,
+      // Start time only — raw mapped label from GHL select_time,
+      // or empty string if unset.
+      eventTime: event.time || '',
       eventCategory: event.type,
       // A2P 10DLC compliance: consent is required on every form that
       // collects phone numbers. Sent as 'Yes'/'No' strings per rule §2.
@@ -46,7 +48,11 @@ export const POST = async (req) => {
       submitted_at: nowIso(),
     }
 
-    const resp = await postWebhook(WEBHOOK_UUID, payload)
+    const resp = await fetch(WEBHOOK_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload),
+    })
     if (!resp.ok) {
       console.error('[api/events/rsvp] upstream status:', resp.status)
       return Response.json({ error: 'Upstream webhook failed' }, { status: 502 })
