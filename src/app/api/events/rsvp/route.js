@@ -1,0 +1,71 @@
+import {
+  postWebhook,
+  nowIso,
+  yesNo,
+  fetchGHLEvent,
+  searchGhlContactByEmail,
+  createGhlAppointment,
+} from '@/lib/ghl'
+
+const WEBHOOK_UUID = 'b8b53720-18c4-4cde-9db9-c549de6264ee'
+
+export const POST = async (req) => {
+  try {
+    const data = await req.json()
+    const firstName = (data.firstName || '').trim()
+    const lastName = (data.lastName || '').trim()
+    const email = (data.email || '').trim()
+    const eventId = (data.eventId || '').trim()
+
+    if (!firstName || !email) {
+      return Response.json({ error: 'Missing required fields' }, { status: 400 })
+    }
+
+    const event = eventId ? await fetchGHLEvent(eventId) : null
+    if (!event) {
+      return Response.json({ error: 'Unknown or missing event' }, { status: 400 })
+    }
+
+    const payload = {
+      type: 'Event_RSVP',
+      firstName,
+      lastName,
+      email,
+      phone: (data.phone || '').trim(),
+      eventName: event.title,
+      eventDate: `${event.date.month} ${event.date.day}, ${event.date.year}`,
+      eventTime: event.endTime
+        ? `${event.time} – ${event.endTime}`
+        : event.time,
+      eventCategory: event.type,
+      // A2P 10DLC compliance: consent is required on every form that
+      // collects phone numbers. Sent as 'Yes'/'No' strings per rule §2.
+      sms_updates: yesNo(data.sms_updates),
+      sms_promo: yesNo(data.sms_promo),
+      source: 'src_event',
+      submitted_at: nowIso(),
+    }
+
+    const resp = await postWebhook(WEBHOOK_UUID, payload)
+    if (!resp.ok) {
+      console.error('[api/events/rsvp] upstream status:', resp.status)
+      return Response.json({ error: 'Upstream webhook failed' }, { status: 502 })
+    }
+
+    // Extended flow — only runs when REST API credentials are configured.
+    let contactId = null
+    if (process.env.GHL_API_KEY && process.env.GHL_LOCATION_ID) {
+      // Wait for GHL workflow to upsert the contact before searching.
+      await new Promise((resolve) => setTimeout(resolve, 2000))
+      contactId = await searchGhlContactByEmail(email)
+      if (contactId) {
+        await createGhlAppointment({ contactId, event })
+      }
+    }
+
+    return Response.json({ success: true, contactId })
+  } catch (err) {
+    console.error('[api/events/rsvp]:', err)
+    return Response.json({ error: 'Internal error' }, { status: 500 })
+  }
+}

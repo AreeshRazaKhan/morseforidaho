@@ -1,0 +1,92 @@
+import Link from 'next/link'
+
+const SiteFooter = () => {
+  return (
+    <footer className="bg-navy-ink text-parchment/70 border-t border-gold/20">
+      <div className="mx-auto max-w-[1400px] px-6 md:px-12 lg:px-20 py-20 grid grid-cols-12 gap-8">
+        <div className="col-span-12 md:col-span-4">
+          <div className="font-display text-gold text-3xl font-bold tracking-[0.2em]">
+            MORSE
+          </div>
+          <div className="mt-2 h-px w-20 bg-gold" />
+          <div className="mt-3 text-[12px] font-bold uppercase tracking-[2.5px] text-parchment/60">
+            Fourth District Judge · Idaho
+          </div>
+          <p className="mt-8 text-sm leading-relaxed max-w-sm">
+            Experienced Federal and State Prosecutor committed to fairness, integrity, and the
+            rule of law.
+          </p>
+        </div>
+
+        <nav className="col-span-6 md:col-span-3">
+          <div className="text-[12px] tracking-[2.5px] uppercase text-gold-muted font-bold mb-4">
+            The Campaign
+          </div>
+          <ul className="text-sm">
+            <li><Link href="/about" className="block py-2.5 hover:text-gold">About David</Link></li>
+            <li><Link href="/events" className="block py-2.5 hover:text-gold">Events</Link></li>
+            <li><Link href="/volunteer" className="block py-2.5 hover:text-gold">Volunteer</Link></li>
+            <li><Link href="/ask-morse" className="block py-2.5 hover:text-gold">Ask Morse</Link></li>
+            <li><Link href="/contact" className="block py-2.5 hover:text-gold">Contact</Link></li>
+          </ul>
+        </nav>
+
+        <address className="col-span-6 md:col-span-5 not-italic">
+          <div className="text-[12px] tracking-[2.5px] uppercase text-gold-muted font-bold mb-4">
+            Contact
+          </div>
+          <ul className="space-y-5 text-sm">
+            <li>
+              <div className="text-[12px] tracking-[2px] uppercase text-parchment/40 font-bold mb-1">
+                Phone
+              </div>
+              <a
+                href="tel:+15088016634"
+                className="inline-block py-2 font-display text-parchment text-lg hover:text-gold transition-colors"
+              >
+                (508) 801-6634
+              </a>
+            </li>
+            <li>
+              <div className="text-[12px] tracking-[2px] uppercase text-parchment/40 font-bold mb-1">
+                Email
+              </div>
+              <a
+                href="mailto:info@morseforidaho.com"
+                className="inline-block py-2 font-display text-parchment text-lg hover:text-gold transition-colors break-all"
+              >
+                info@morseforidaho.com
+              </a>
+            </li>
+            <li>
+              <div className="text-[12px] tracking-[2px] uppercase text-parchment/40 font-bold mb-1">
+                Mailing Address
+              </div>
+              <div className="text-parchment leading-relaxed">
+                Morse For Idaho<br />
+                P.O. Box 1776<br />
+                Boise, ID 83701
+              </div>
+            </li>
+          </ul>
+        </address>
+      </div>
+      <div className="border-t border-gold/10">
+        <div className="mx-auto max-w-[1400px] px-6 md:px-12 lg:px-20 py-6 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 text-[12px] tracking-[1.5px] uppercase text-parchment/40">
+          <span>© 2026 Morse For Idaho. All rights reserved. Paid for by Morse For Idaho.</span>
+          <nav className="flex items-center gap-4 sm:gap-6">
+            <Link href="/privacy-policy" className="block py-3 hover:text-gold transition-colors">
+              Privacy Policy
+            </Link>
+            <span aria-hidden="true" className="text-parchment/20">·</span>
+            <Link href="/terms-of-service" className="block py-3 hover:text-gold transition-colors">
+              Terms of Service
+            </Link>
+          </nav>
+        </div>
+      </div>
+    </footer>
+  )
+}
+
+export default SiteFooter
