@@ -60,7 +60,13 @@
       "Bash(mv 69c5808f6b0a705d942222d6.png zelle-qr.png)",
       "Bash(mv 69c5808fe249815c721700bc.png venmo-qr.png)",
       "Bash(rm 69c5706d81e6bc76bd68e38e.png 69c5865e9619acca9d8dfbb9.png)",
-      "Bash(cygpath -w /tmp/playwright-test-donate.js)"
+      "Bash(cygpath -w /tmp/playwright-test-donate.js)",
+      "Bash(git clone:*)",
+      "Bash(mv playwright-skill:*)",
+      "Bash(mv playwright-skill.tmp/skills/playwright-skill ./playwright-skill)",
+      "Bash(rm -rf playwright-skill.tmp)",
+      "Bash(rm -rf ~/.claude/skills/playwright-skill)",
+      "Read(//c/Users/Dev/.claude/skills/**)"
     ]
   }
 }

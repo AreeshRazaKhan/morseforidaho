@@ -42,9 +42,9 @@ const District = () => {
         </div>
 
         {/* Right orbiting bento — 5 cols, asymmetric inner grid */}
-        <aside className="col-span-12 lg:col-span-5 grid grid-cols-2 gap-4 md:gap-6 content-start">
+        <aside className="col-span-12 lg:col-span-5 grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 content-start">
           {/* Counties tile — spans both cols */}
-          <div className="col-span-2 bg-navy text-parchment rounded-2xl p-10 relative overflow-hidden min-h-[220px]">
+          <div className="sm:col-span-2 bg-navy text-parchment rounded-2xl p-10 relative overflow-hidden min-h-[220px]">
             <div
               aria-hidden="true"
               className="absolute inset-4 border border-gold/30 pointer-events-none"
@@ -93,7 +93,7 @@ const District = () => {
           </div>
 
           {/* Cities strip */}
-          <div className="col-span-2 bg-white border border-parchment-3 rounded-2xl p-8">
+          <div className="sm:col-span-2 bg-white border border-parchment-3 rounded-2xl p-8">
             <span className="text-[12px] tracking-[2.5px] uppercase text-gold-muted font-bold">
               Communities
             </span>

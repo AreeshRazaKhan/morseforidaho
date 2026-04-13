@@ -29,7 +29,7 @@ const RootLayout = ({ children }) => {
       lang="en"
       className={`${ebGaramond.variable} ${sourceSerif.variable} antialiased`}
     >
-      <body className="bg-parchment text-ink font-body">{children}</body>
+      <body className="bg-parchment text-ink font-body overflow-x-hidden">{children}</body>
     </html>
   )
 }

@@ -18,13 +18,23 @@ const HELP_OPTIONS = [
   'Media',
 ]
 
-const COUNTIES = ['Ada', 'Boise', 'Elmore', 'Valley', 'Other / Out of District']
+const COUNTIES = [
+  'Ada', 'Adams', 'Bannock', 'Bear Lake', 'Benewah', 'Bingham', 'Blaine',
+  'Boise', 'Bonner', 'Bonneville', 'Boundary', 'Butte', 'Camas', 'Canyon',
+  'Caribou', 'Cassia', 'Clark', 'Clearwater', 'Custer', 'Elmore', 'Franklin',
+  'Fremont', 'Gem', 'Gooding', 'Idaho', 'Jefferson', 'Jerome', 'Kootenai',
+  'Latah', 'Lemhi', 'Lewis', 'Lincoln', 'Madison', 'Minidoka', 'Nez Perce',
+  'Oneida', 'Owyhee', 'Payette', 'Power', 'Shoshone', 'Teton', 'Twin Falls',
+  'Valley', 'Washington',
+]
 const REGIONS = [
-  'Boise Metro',
-  'North County (McCall / Cascade)',
-  'Mountain Home / Elmore',
-  'Rural Boise County',
-  'Outside Fourth District',
+  'North Idaho (Panhandle)',
+  'North Central Idaho',
+  'Southwestern Idaho',
+  'South Central Idaho',
+  'Southeastern Idaho',
+  'Eastern Idaho',
+  'Central Idaho',
 ]
 const EXPERIENCE = [
   'None',
