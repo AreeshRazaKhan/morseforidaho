@@ -22,7 +22,7 @@ const WhyThisRace = () => {
           </span>
         </div>
 
-        <div className="grid grid-cols-12 gap-8 md:gap-12 items-start">
+        <div className="grid grid-cols-12 gap-y-8 md:gap-12 items-start">
           <h2 className="col-span-12 lg:col-span-6 font-display font-bold leading-[1.05] text-[clamp(40px,5.5vw,80px)]">
             Why This Race <span className="italic text-gold font-medium">Matters.</span>
           </h2>

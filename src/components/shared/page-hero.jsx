@@ -58,7 +58,7 @@ const PageHero = ({
           </span>
         </div>
 
-        <div className="grid grid-cols-12 gap-8 md:gap-12 items-end">
+        <div className="grid grid-cols-12 gap-y-8 md:gap-12 items-end">
           <div className={meta ? 'col-span-12 lg:col-span-8' : 'col-span-12'}>
             <h1 className="font-display font-bold leading-[0.96] tracking-[-0.02em] text-[clamp(56px,9vw,128px)]">
               {title}

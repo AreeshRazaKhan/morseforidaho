@@ -39,7 +39,7 @@ const Events = async () => {
 
       <div className="relative mx-auto max-w-[1400px] px-6 md:px-12 lg:px-20">
         {/* Header — right-aligned to shift rhythm from previous sections */}
-        <div className="grid grid-cols-12 gap-8 items-end mb-24">
+        <div className="grid grid-cols-12 gap-y-8 md:gap-8 items-end mb-24">
           <p className="col-span-12 lg:col-span-4 lg:col-start-1 text-parchment/70 text-base md:text-lg leading-relaxed max-w-md order-2 lg:order-1">
             Courthouse steps, kitchen tables, veteran halls. The campaign travels the Fourth
             District every week — come meet David on the road.
@@ -197,7 +197,7 @@ const Events = async () => {
         )}
 
         {/* Bottom pull quote */}
-        <div className="mt-28 md:mt-36 grid grid-cols-12 gap-8 items-center border-t border-gold/15 pt-12">
+        <div className="mt-28 md:mt-36 grid grid-cols-12 gap-y-8 md:gap-8 items-center border-t border-gold/15 pt-12">
           <blockquote className="col-span-12 lg:col-span-7 border-l-[3px] border-gold pl-6 py-1">
             <p className="font-display italic text-xl md:text-2xl text-parchment/90 leading-[1.45]">
               <span className="text-gold">Free and open</span> to every registered Idaho

@@ -62,7 +62,7 @@ const Hero = () => {
         </div>
 
         {/* Asymmetric bento: 7-col headline + 5-col meta */}
-        <div className="grid grid-cols-12 gap-8 md:gap-12 items-end">
+        <div className="grid grid-cols-12 gap-y-8 md:gap-12 items-end">
           <div className="col-span-12 lg:col-span-8">
             <h1 className="font-display font-bold leading-[0.95] tracking-[-0.02em] text-[clamp(56px,9vw,128px)]">
               David

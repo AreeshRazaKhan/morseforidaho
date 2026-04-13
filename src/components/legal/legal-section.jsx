@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 const LegalSection = ({ numeral, title, children }) => {
   return (
     <section className="relative border-t border-parchment-3 pt-12 first:border-t-0 first:pt-0">
-      <div className="grid grid-cols-12 gap-8 md:gap-12">
+      <div className="grid grid-cols-12 gap-y-8 md:gap-12">
         <div className="col-span-12 lg:col-span-3">
           <span className="font-display italic font-bold text-gold text-5xl leading-none">
             {numeral}

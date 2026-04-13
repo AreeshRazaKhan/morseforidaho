@@ -49,7 +49,7 @@ const Platform = () => {
       </span>
 
       <div className="relative mx-auto max-w-[1400px] px-6 md:px-12 lg:px-20">
-        <div className="grid grid-cols-12 gap-8 items-end mb-20">
+        <div className="grid grid-cols-12 gap-y-8 md:gap-8 items-end mb-20">
           <div className="col-span-12 lg:col-span-8">
             <div className="flex items-center gap-4 mb-6">
               <span className="h-px w-10 bg-gold" />
@@ -68,7 +68,7 @@ const Platform = () => {
         </div>
 
         {/* Asymmetric bento: 7/5, 5/7 */}
-        <div className="grid grid-cols-12 gap-6 md:gap-8">
+        <div className="grid grid-cols-12 gap-y-6 md:gap-8">
           {PILLARS.map((p) => (
             <article
               key={p.numeral}

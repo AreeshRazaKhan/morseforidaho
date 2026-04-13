@@ -110,7 +110,7 @@ const AboutPage = () => {
               </span>
             </div>
 
-            <div className="grid grid-cols-12 gap-8 md:gap-12 items-end">
+            <div className="grid grid-cols-12 gap-y-8 md:gap-12 items-end">
               <div className="col-span-12 lg:col-span-8">
                 <h1 className="font-display font-bold leading-[0.96] tracking-[-0.02em] text-[clamp(56px,9vw,128px)]">
                   About
@@ -153,7 +153,7 @@ const AboutPage = () => {
             II
           </span>
 
-          <div className="relative mx-auto max-w-[1400px] px-6 md:px-12 lg:px-20 grid grid-cols-12 gap-8 md:gap-12">
+          <div className="relative mx-auto max-w-[1400px] px-6 md:px-12 lg:px-20 grid grid-cols-12 gap-y-8 md:gap-12">
             {/* Portrait — spans 5, tall, offset low */}
             <div className="col-span-12 lg:col-span-5 lg:row-span-2 relative bg-navy rounded-2xl min-h-[480px] md:min-h-[640px] overflow-hidden">
               <Image
@@ -240,7 +240,7 @@ const AboutPage = () => {
           </span>
 
           <div className="relative mx-auto max-w-[1400px] px-6 md:px-12 lg:px-20">
-            <div className="grid grid-cols-12 gap-8 items-end mb-20">
+            <div className="grid grid-cols-12 gap-y-8 md:gap-8 items-end mb-20">
               <div className="col-span-12 lg:col-span-8">
                 <div className="flex items-center gap-4 mb-6">
                   <span className="h-px w-10 bg-gold" />
@@ -269,7 +269,7 @@ const AboutPage = () => {
               {CAREER_CHAPTERS.map((c) => (
                 <li
                   key={c.numeral}
-                  className="relative grid grid-cols-12 gap-6 md:gap-8 items-start bg-navy/40 border border-gold/15 rounded-xl p-6 md:p-8 hover:border-gold/40 transition-colors"
+                  className="relative grid grid-cols-12 gap-y-6 md:gap-8 items-start bg-navy/40 border border-gold/15 rounded-xl p-6 md:p-8 hover:border-gold/40 transition-colors"
                 >
                   {/* Numeral + rail tether */}
                   <div className="col-span-12 md:col-span-2 flex md:flex-col items-center md:items-start gap-4 md:gap-2 relative">
@@ -380,7 +380,7 @@ const AboutPage = () => {
               <span className="italic text-gold font-medium">Fair.</span>
             </h2>
 
-            <div className="mt-20 grid grid-cols-12 gap-6 md:gap-8">
+            <div className="mt-20 grid grid-cols-12 gap-y-6 md:gap-8">
               {VALUES.map((v, i) => (
                 <article
                   key={v.numeral}
@@ -429,7 +429,7 @@ const AboutPage = () => {
             2026
           </span>
 
-          <div className="relative mx-auto max-w-[1400px] px-6 md:px-12 lg:px-20 grid grid-cols-12 gap-8 items-center">
+          <div className="relative mx-auto max-w-[1400px] px-6 md:px-12 lg:px-20 grid grid-cols-12 gap-y-8 md:gap-8 items-center">
             <div className="col-span-12 lg:col-span-8">
               <div className="flex items-center gap-4 mb-6">
                 <span className="h-px w-10 bg-gold" />

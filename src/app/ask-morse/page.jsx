@@ -61,7 +61,7 @@ const AskMorsePage = () => {
             ?
           </span>
 
-          <div className="relative mx-auto max-w-[1400px] px-6 md:px-12 lg:px-20 grid grid-cols-12 gap-8 md:gap-12">
+          <div className="relative mx-auto max-w-[1400px] px-6 md:px-12 lg:px-20 grid grid-cols-12 gap-y-8 md:gap-12">
             {/* Left — framing */}
             <div className="col-span-12 lg:col-span-5 lg:sticky lg:top-28 self-start">
               <div className="flex items-center gap-4 mb-6">
@@ -127,7 +127,7 @@ const AskMorsePage = () => {
           </span>
 
           <div className="relative mx-auto max-w-[1400px] px-6 md:px-12 lg:px-20">
-            <div className="grid grid-cols-12 gap-8 items-end mb-20">
+            <div className="grid grid-cols-12 gap-y-8 md:gap-8 items-end mb-20">
               <div className="col-span-12 lg:col-span-7">
                 <div className="flex items-center gap-4 mb-6">
                   <span className="h-px w-10 bg-burgundy" />
@@ -149,7 +149,7 @@ const AskMorsePage = () => {
               {PAST_QA.map((qa) => (
                 <li
                   key={qa.numeral}
-                  className="relative bg-white border border-parchment-3 rounded-2xl p-10 md:p-12 grid grid-cols-12 gap-6 md:gap-10 hover:border-gold/50 transition-colors"
+                  className="relative bg-white border border-parchment-3 rounded-2xl p-10 md:p-12 grid grid-cols-12 gap-y-6 md:gap-10 hover:border-gold/50 transition-colors"
                 >
                   <div className="col-span-12 md:col-span-2">
                     <span className="font-display italic font-bold text-gold text-6xl leading-none block">

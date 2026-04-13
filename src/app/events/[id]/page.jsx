@@ -86,7 +86,7 @@ const EventDetailPage = async ({ params }) => {
               </span>
             </div>
 
-            <div className="grid grid-cols-12 gap-8 md:gap-12 items-end">
+            <div className="grid grid-cols-12 gap-y-8 md:gap-12 items-end">
               <div className="col-span-12 lg:col-span-8">
                 <div className="text-sm md:text-base tracking-[2px] uppercase text-gold font-semibold mb-4">
                   {event.date.month} {event.date.day}, {event.date.year}
@@ -139,7 +139,7 @@ const EventDetailPage = async ({ params }) => {
             01
           </span>
 
-          <div className="relative mx-auto max-w-[1400px] px-6 md:px-12 lg:px-20 grid grid-cols-12 gap-8 md:gap-12">
+          <div className="relative mx-auto max-w-[1400px] px-6 md:px-12 lg:px-20 grid grid-cols-12 gap-y-8 md:gap-12">
             <article className="col-span-12 lg:col-span-8">
               <div className="flex items-center gap-4 mb-6">
                 <span className="h-px w-10 bg-burgundy" />
@@ -248,7 +248,7 @@ const EventDetailPage = async ({ params }) => {
             RSVP
           </span>
 
-          <div className="relative mx-auto max-w-[1400px] px-6 md:px-12 lg:px-20 grid grid-cols-12 gap-8 md:gap-12">
+          <div className="relative mx-auto max-w-[1400px] px-6 md:px-12 lg:px-20 grid grid-cols-12 gap-y-8 md:gap-12">
             <div className="col-span-12 lg:col-span-5 lg:sticky lg:top-28 self-start">
               <div className="flex items-center gap-4 mb-6">
                 <span className="h-px w-10 bg-gold" />

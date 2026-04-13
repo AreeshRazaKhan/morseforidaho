@@ -4,7 +4,7 @@ import Link from 'next/link'
 const SiteFooter = () => {
   return (
     <footer className="bg-navy-ink text-parchment/70 border-t border-gold/20">
-      <div className="mx-auto max-w-[1400px] px-6 md:px-12 lg:px-20 py-20 grid grid-cols-12 gap-8">
+      <div className="mx-auto max-w-[1400px] px-6 md:px-12 lg:px-20 py-20 grid grid-cols-12 gap-y-10 md:gap-8">
         <div className="col-span-12 md:col-span-4">
           <Link
             href="/"

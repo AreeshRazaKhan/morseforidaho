@@ -30,7 +30,7 @@ const MeetDavid = () => {
         </h2>
 
         {/* Asymmetric 12-col bento */}
-        <div className="mt-20 grid grid-cols-12 gap-6 md:gap-8">
+        <div className="mt-20 grid grid-cols-12 gap-y-6 md:gap-8">
           {/* Drop-cap opening paragraph — spans 7 */}
           <article className="col-span-12 lg:col-span-7 bg-white border border-parchment-3 rounded-2xl p-10 md:p-14">
             <p className="font-body text-lg leading-[1.75] text-ink-soft first-letter:font-display first-letter:font-bold first-letter:italic first-letter:text-[88px] first-letter:leading-[0.82] first-letter:float-left first-letter:pr-3 first-letter:pt-2 first-letter:text-burgundy">

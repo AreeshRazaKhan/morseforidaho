@@ -45,7 +45,7 @@ const Faq = () => {
         VI
       </span>
 
-      <div className="relative mx-auto max-w-[1400px] px-6 md:px-12 lg:px-20 grid grid-cols-12 gap-12">
+      <div className="relative mx-auto max-w-[1400px] px-6 md:px-12 lg:px-20 grid grid-cols-12 gap-y-12 md:gap-12">
         <div className="col-span-12 lg:col-span-4">
           <div className="flex items-center gap-4 mb-6">
             <span className="h-px w-10 bg-burgundy" />

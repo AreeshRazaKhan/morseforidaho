@@ -91,7 +91,7 @@ const EventsPage = async () => {
                           {numeral}
                         </span>
 
-                        <div className="relative grid grid-cols-12 gap-6 md:gap-10 items-center">
+                        <div className="relative grid grid-cols-12 gap-y-6 md:gap-10 items-center">
                           <div className="col-span-12 md:col-span-3 lg:col-span-2">
                             <div className="font-display italic text-gold-muted text-xs tracking-[2px] uppercase font-bold">
                               {ev.date.year}

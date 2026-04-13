@@ -82,7 +82,7 @@ const ContactPage = () => {
               </span>
             </div>
 
-            <div className="grid grid-cols-12 gap-8 md:gap-12 items-end">
+            <div className="grid grid-cols-12 gap-y-8 md:gap-12 items-end">
               <div className="col-span-12 lg:col-span-9">
                 <h1 className="font-display font-bold leading-[0.96] tracking-[-0.02em] text-[clamp(56px,9vw,136px)]">
                   Write to
@@ -120,7 +120,7 @@ const ContactPage = () => {
             I
           </span>
 
-          <div className="relative mx-auto max-w-[1400px] px-6 md:px-12 lg:px-20 grid grid-cols-12 gap-8 md:gap-12">
+          <div className="relative mx-auto max-w-[1400px] px-6 md:px-12 lg:px-20 grid grid-cols-12 gap-y-8 md:gap-12">
             {/* Contact info column — 5 cols */}
             <aside className="col-span-12 lg:col-span-5 lg:sticky lg:top-28 self-start">
               <div className="flex items-center gap-4 mb-6">
@@ -196,7 +196,7 @@ const ContactPage = () => {
           </span>
 
           <div className="relative mx-auto max-w-[1400px] px-6 md:px-12 lg:px-20">
-            <div className="grid grid-cols-12 gap-8 items-end mb-20">
+            <div className="grid grid-cols-12 gap-y-8 md:gap-8 items-end mb-20">
               <div className="col-span-12 lg:col-span-7">
                 <div className="flex items-center gap-4 mb-6">
                   <span className="h-px w-10 bg-burgundy" />
@@ -215,7 +215,7 @@ const ContactPage = () => {
             </div>
 
             {/* 7/5, 5/7 asymmetric bento */}
-            <div className="grid grid-cols-12 gap-6 md:gap-8">
+            <div className="grid grid-cols-12 gap-y-6 md:gap-8">
               {REASONS.map((r, i) => (
                 <article
                   key={r.numeral}
@@ -271,7 +271,7 @@ const ContactPage = () => {
             2026
           </span>
 
-          <div className="relative mx-auto max-w-[1400px] px-6 md:px-12 lg:px-20 grid grid-cols-12 gap-8 items-center">
+          <div className="relative mx-auto max-w-[1400px] px-6 md:px-12 lg:px-20 grid grid-cols-12 gap-y-8 md:gap-8 items-center">
             <div className="col-span-12 lg:col-span-8">
               <div className="flex items-center gap-4 mb-6">
                 <span className="h-px w-10 bg-gold" />
