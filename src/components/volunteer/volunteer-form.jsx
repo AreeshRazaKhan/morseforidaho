@@ -37,12 +37,12 @@ const REGIONS = [
   'Central Idaho',
 ]
 const EXPERIENCE = [
-  'None',
-  'Some Volunteering',
-  'Regular Volunteer',
-  'Campaign Staff',
-  'Campaign Management',
-  'Elected/Appointed Office',
+  'Yes, local (school board, county commissioner, etc.)',
+  'Yes, state level (House, Senate, State Assembly, etc.)',
+  'Yes, statewide (AG, Governor, etc.)',
+  'Yes, federal (Congressional)',
+  'Yes, federal (Presidential)',
+  'No',
 ]
 const AVAILABILITY = [
   '1-2 hours/week',
