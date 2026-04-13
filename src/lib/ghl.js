@@ -50,68 +50,6 @@ export const ghlRestHeaders = () => ({
   'Content-Type': 'application/json',
 })
 
-const parseTimeLabel = (label) => {
-  if (!label) return '12:00'
-  const m = label.match(/(\d+):(\d+)\s*(AM|PM)/i)
-  if (!m) return '12:00'
-  let hours = parseInt(m[1], 10)
-  const minutes = m[2]
-  const period = m[3].toUpperCase()
-  if (period === 'PM' && hours !== 12) hours += 12
-  if (period === 'AM' && hours === 12) hours = 0
-  return `${String(hours).padStart(2, '0')}:${minutes}`
-}
-
-export const eventIsoStart = (event) => {
-  const raw = event?.date?.raw
-  if (!raw) return null
-  return `${raw}T${parseTimeLabel(event.time)}:00`
-}
-
-export const searchGhlContactByEmail = async (email) => {
-  if (!GHL_API_KEY || !GHL_LOCATION_ID) return null
-  try {
-    const url = `${GHL_BASE_URL}/contacts/search/duplicate?locationId=${GHL_LOCATION_ID}&email=${encodeURIComponent(email)}`
-    const resp = await fetch(url, { headers: restHeaders() })
-    if (!resp.ok) return null
-    const json = await resp.json()
-    return json?.contact?.id || null
-  } catch (err) {
-    console.error('[ghl.searchContact]:', err)
-    return null
-  }
-}
-
-export const createGhlAppointment = async ({ contactId, event }) => {
-  if (!GHL_API_KEY || !GHL_LOCATION_ID || !contactId) return null
-  const isoStart = eventIsoStart(event)
-  if (!isoStart) return null
-  try {
-    const start = new Date(isoStart)
-    const end = new Date(start.getTime() + 60 * 60 * 1000)
-    const calendarId = process.env.GHL_EVENTS_CALENDAR_ID || 'UTM5EkrGwiZjQyc19WGN'
-    const resp = await fetch(`${GHL_BASE_URL}/calendars/events/appointments`, {
-      method: 'POST',
-      headers: ghlRestHeaders(),
-      body: JSON.stringify({
-        calendarId,
-        locationId: GHL_LOCATION_ID,
-        contactId,
-        title: `RSVP: ${event.title}`,
-        appointmentStatus: 'confirmed',
-        startTime: start.toISOString(),
-        endTime: end.toISOString(),
-        timezone: 'America/Boise',
-        notes: 'RSVP submitted via campaign website',
-      }),
-    })
-    return resp.ok
-  } catch (err) {
-    console.error('[ghl.createAppointment]:', err)
-    return null
-  }
-}
-
 // ══════════════════════════════════════════════════════════════
 // 3. EVENTS CUSTOM OBJECT — list + single fetch
 // Per .claude/rules/ghl-events-integration.md

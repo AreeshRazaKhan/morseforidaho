@@ -33,7 +33,7 @@ const Election = () => {
           </h2>
           <p className="mt-8 text-parchment/80 text-base md:text-lg max-w-xl">
             Judicial elections in Idaho are nonpartisan — every registered Idaho voter can
-            vote for David. Mark your calendar and make your voice heard.
+            vote for David. Save the date and make your voice heard.
           </p>
           <div className="mt-12 flex flex-wrap gap-4">
             <Link

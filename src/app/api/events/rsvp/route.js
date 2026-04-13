@@ -1,10 +1,4 @@
-import {
-  nowIso,
-  yesNo,
-  fetchGHLEvent,
-  searchGhlContactByEmail,
-  createGhlAppointment,
-} from '@/lib/ghl'
+import { nowIso, yesNo, fetchGHLEvent } from '@/lib/ghl'
 
 // Full URL hardcoded — Morse account uses a location-scoped hook ID
 // (`BlWviZhz7Vyrg1cbGSYr`) rather than the template default.
@@ -58,18 +52,7 @@ export const POST = async (req) => {
       return Response.json({ error: 'Upstream webhook failed' }, { status: 502 })
     }
 
-    // Extended flow — only runs when REST API credentials are configured.
-    let contactId = null
-    if (process.env.GHL_API_KEY && process.env.GHL_LOCATION_ID) {
-      // Wait for GHL workflow to upsert the contact before searching.
-      await new Promise((resolve) => setTimeout(resolve, 2000))
-      contactId = await searchGhlContactByEmail(email)
-      if (contactId) {
-        await createGhlAppointment({ contactId, event })
-      }
-    }
-
-    return Response.json({ success: true, contactId })
+    return Response.json({ success: true })
   } catch (err) {
     console.error('[api/events/rsvp]:', err)
     return Response.json({ error: 'Internal error' }, { status: 500 })
