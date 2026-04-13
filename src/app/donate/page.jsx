@@ -430,16 +430,6 @@ const DonatePage = () => {
           </div>
         </section>
 
-        {/* Disclosure */}
-        <section className="relative bg-navy-ink text-parchment/60 py-12">
-          <div className="mx-auto max-w-[1400px] px-6 md:px-12 lg:px-20 border-t border-gold/15 pt-10">
-            <p className="text-[11px] tracking-[0.3px] leading-[1.85] max-w-3xl">
-              Contributions to Morse For Idaho are not tax-deductible as
-              charitable contributions for federal income tax purposes. Paid
-              for by Morse For Idaho.
-            </p>
-          </div>
-        </section>
       </main>
       <SiteFooter />
     </>
