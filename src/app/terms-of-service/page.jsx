@@ -192,7 +192,7 @@ const TermsOfServicePage = () => {
                     Morse For Idaho
                   </div>
                   <div className="mt-4 space-y-1 text-ink">
-                    <div>P.O. Box 1776, Boise, ID 83701</div>
+                    <div>P.O. Box 171101, Boise, ID 83716</div>
                     <div>
                       <a
                         href="mailto:david@morseforidaho.com"

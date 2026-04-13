@@ -26,6 +26,13 @@ const PILLARS = [
     chapter: 'Record',
     title: 'Proven Track Record',
     body: "David has successfully prosecuted some of Idaho's most serious cases — protecting families, upholding the Constitution, and building the courtroom experience a district judge must bring to the bench every day.",
+    cases: [
+      'Meth Trafficker Sentenced to 22 Years',
+      'Drug Trafficker Sentenced to 16 Years',
+      "Fentanyl Dealer Pleads Guilty After Co-Worker's Death",
+      'Wire Fraud & Identity Theft — 5+ Year Sentence',
+      'Corrupt Sheriff Sentenced for Misusing Funds',
+    ],
     span: 'lg:col-span-7',
     tall: true,
   },
@@ -81,9 +88,24 @@ const Platform = () => {
                   {p.title}
                 </h3>
               </div>
-              <p className="relative mt-10 text-parchment/70 text-[15px] md:text-base leading-[1.75] max-w-[52ch]">
-                {p.body}
-              </p>
+              <div className="relative mt-10">
+                <p className="text-parchment/70 text-[15px] md:text-base leading-[1.75] max-w-[52ch]">
+                  {p.body}
+                </p>
+                {p.cases && (
+                  <ul className="mt-8 space-y-3 border-l border-gold/30 pl-6">
+                    {p.cases.map((c) => (
+                      <li
+                        key={c}
+                        className="text-[13px] tracking-[0.5px] text-parchment/80 font-semibold leading-snug"
+                      >
+                        <span className="text-gold mr-2">·</span>
+                        {c}
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </div>
             </article>
           ))}
         </div>

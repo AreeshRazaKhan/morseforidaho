@@ -16,7 +16,14 @@ export const metadata = {
 const ROMAN = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X']
 
 const EventsPage = async () => {
-  const events = await fetchGHLEvents()
+  const allEvents = await fetchGHLEvents()
+  const startOfToday = new Date()
+  startOfToday.setHours(0, 0, 0, 0)
+  const events = allEvents.filter((e) => {
+    const raw = e.endDate?.raw || e.date?.raw
+    if (!raw) return false
+    return new Date(raw) >= startOfToday
+  })
 
   return (
     <>

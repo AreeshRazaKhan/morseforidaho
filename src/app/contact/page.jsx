@@ -171,9 +171,9 @@ const ContactPage = () => {
                   <div className="mt-2 font-display font-bold text-navy text-xl md:text-2xl leading-snug">
                     Morse For Idaho
                     <br />
-                    P.O. Box 1776
+                    P.O. Box 171101
                     <br />
-                    Boise, ID 83701
+                    Boise, ID 83716
                   </div>
                   <div className="mt-3 text-[12px] tracking-[1.5px] uppercase text-ink-muted">
                     Checks payable to "Morse For Idaho"

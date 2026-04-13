@@ -64,8 +64,8 @@ const SiteFooter = () => {
               </div>
               <div className="text-parchment leading-relaxed">
                 Morse For Idaho<br />
-                P.O. Box 1776<br />
-                Boise, ID 83701
+                P.O. Box 171101<br />
+                Boise, ID 83716
               </div>
             </li>
           </ul>

@@ -25,7 +25,11 @@ const FAQ_ITEMS = [
   },
   {
     q: 'How are donations used?',
-    a: "All contributions go directly toward campaign operations — yard signs, community events, voter outreach, and getting David's message to every corner of the Fourth District. Every dollar counts.",
+    a: "All contributions go directly toward campaign operations. Yard signs, community events, voter outreach, and getting David's message to every corner of the Fourth District. Every dollar counts.",
+  },
+  {
+    q: 'How is my personal information protected?',
+    a: 'We take your privacy seriously. Your information is used solely for campaign communications and is never sold to third parties. You can opt out of text or email communications at any time. See our Privacy Policy and Terms & Conditions for full details.',
   },
 ]
 

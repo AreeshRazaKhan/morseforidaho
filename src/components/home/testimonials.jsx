@@ -1,26 +1,26 @@
 const QUOTES = [
   {
     body: "David Morse has the integrity, legal expertise, and temperament we need on the bench. He'll serve all Idahoans fairly.",
-    author: 'Community Leader',
-    role: 'Boise',
+    author: 'Marc Haws',
+    role: 'Community Leader, Boise',
     span: 'lg:col-span-7',
   },
   {
     body: "I've watched David in the courtroom — he's thorough, prepared, and treats every person with respect. That's the kind of judge we deserve.",
-    author: 'Idaho State Representative',
-    role: '',
+    author: 'John Shirts',
+    role: 'Idaho State Representative',
     span: 'lg:col-span-5',
   },
   {
     body: "David understands Idaho values. His commitment to fairness and the rule of law is exactly what the Fourth District needs.",
-    author: 'Former United States Attorney',
-    role: 'District of Idaho',
+    author: 'Wendy Olson',
+    role: 'Former U.S. Attorney for Idaho',
     span: 'lg:col-span-5',
   },
   {
     body: "I've had the opportunity to work on the other side of some of the most serious cases with David Morse. He's always been professional, honest, and plays by the rules. He'd be a great judge.",
-    author: 'Partner',
-    role: 'Hooper Mitchell & Associates',
+    author: 'Aaron Hooper',
+    role: 'Partner, Hooper Mitchell & Associates',
     span: 'lg:col-span-7',
   },
 ]

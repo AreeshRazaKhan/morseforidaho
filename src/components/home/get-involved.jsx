@@ -80,7 +80,7 @@ const GetInvolved = () => {
                 type="email"
                 name="email"
                 className="mt-2 w-full bg-navy-ink/50 border border-gold/20 text-parchment px-5 py-4 font-body focus:outline-none focus:border-gold transition-colors"
-                placeholder="you@idaho.gov"
+                placeholder="you@email.com"
               />
             </label>
             <label className="block">

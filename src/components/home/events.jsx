@@ -13,7 +13,14 @@ const ZIGZAG_OFFSETS = [
 
 const Events = async () => {
   const allEvents = await fetchGHLEvents()
-  const stops = allEvents.slice(0, 5)
+  const startOfToday = new Date()
+  startOfToday.setHours(0, 0, 0, 0)
+  const upcoming = allEvents.filter((e) => {
+    const raw = e.endDate?.raw || e.date?.raw
+    if (!raw) return false
+    return new Date(raw) >= startOfToday
+  })
+  const stops = upcoming.slice(0, 5)
 
   return (
     <section id="events" className="relative bg-navy text-parchment overflow-hidden py-32 md:py-48">
