@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import { useState } from 'react'
 
-import { SMS_CONSENT } from '@/constants/a2p'
+import SmsConsentText from '@/components/ui/sms-consent'
 
 const TOPICS = [
   'Judicial Philosophy',
@@ -253,7 +253,7 @@ const AskMorseForm = () => {
               className="mt-0.5 shrink-0 accent-gold"
               disabled={status === 'submitting'}
             />
-            <span>{SMS_CONSENT}</span>
+            <span><SmsConsentText /></span>
           </label>
         </fieldset>
 

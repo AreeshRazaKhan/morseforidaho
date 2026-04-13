@@ -4,7 +4,7 @@ import Link from 'next/link'
 import PropTypes from 'prop-types'
 import { useState } from 'react'
 
-import { SMS_CONSENT } from '@/constants/a2p'
+import SmsConsentText from '@/components/ui/sms-consent'
 
 // GHL rule §4 lists only First Name, Last Name, Email, Contact Number.
 // The A2P 10DLC SOP (Operation 1776) requires both SMS consent checkboxes
@@ -198,7 +198,7 @@ const RsvpForm = ({ event }) => {
               className="mt-0.5 shrink-0 accent-gold"
               disabled={status === 'submitting'}
             />
-            <span>{SMS_CONSENT}</span>
+            <span><SmsConsentText /></span>
           </label>
         </fieldset>
 

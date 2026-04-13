@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import { useState } from 'react'
 
-import { SMS_CONSENT } from '@/constants/a2p'
+import SmsConsentText from '@/components/ui/sms-consent'
 
 // Values below are locked to .claude/rules/ghl-forms-webhooks.md §2.
 // Do not edit the string values without updating the GHL workflow tags.
@@ -341,7 +341,7 @@ const VolunteerForm = () => {
           <label className="flex items-start gap-3 text-parchment/60 text-[12px] leading-relaxed cursor-pointer">
             <input type="checkbox" name="sms_updates" checked={form.sms_updates} onChange={onChange}
               className="mt-0.5 shrink-0 accent-gold" />
-            <span>{SMS_CONSENT}</span>
+            <span><SmsConsentText /></span>
           </label>
         </fieldset>
 

@@ -1,3 +1,5 @@
+import SmsConsentText from '@/components/ui/sms-consent'
+
 const GetInvolved = () => {
   return (
     <section id="get-involved" className="relative bg-navy text-parchment overflow-hidden py-32 md:py-48">
@@ -85,7 +87,7 @@ const GetInvolved = () => {
             </label>
             <label className="block">
               <span className="text-[12px] tracking-[2px] uppercase text-gold-muted font-bold">
-                Phone
+                Phone · Optional
               </span>
               <input
                 type="tel"
@@ -102,10 +104,14 @@ const GetInvolved = () => {
           >
             Defend Our Values →
           </button>
-          <p className="relative text-[12px] text-parchment/40 leading-relaxed">
-            By providing your phone number you consent to receive calls and text messages from
-            Morse For Idaho. Msg &amp; data rates may apply. Reply STOP to unsubscribe.
-          </p>
+          <label className="relative flex items-start gap-3 text-parchment/60 text-[12px] leading-relaxed cursor-pointer">
+            <input
+              type="checkbox"
+              name="sms_updates"
+              className="mt-0.5 shrink-0 accent-gold"
+            />
+            <span><SmsConsentText /></span>
+          </label>
         </form>
       </div>
     </section>
