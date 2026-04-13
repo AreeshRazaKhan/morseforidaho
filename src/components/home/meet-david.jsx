@@ -43,8 +43,8 @@ const MeetDavid = () => {
           {/* Portrait tile — photograph with brand gradient per guide */}
           <div className="col-span-12 lg:col-span-5 relative bg-navy rounded-2xl min-h-[420px] md:min-h-[520px] overflow-hidden flex items-end p-10">
             <Image
-              src="https://images.unsplash.com/photo-1589829085413-56de8ae18c73?q=80&w=1200&auto=format&fit=crop"
-              alt="David Morse, candidate for Fourth District Judge, on the courthouse steps in Boise"
+              src="/david-morse-portrait.webp"
+              alt="David Morse, candidate for Fourth District Judge"
               fill
               sizes="(min-width: 1024px) 40vw, 100vw"
               className="object-cover"

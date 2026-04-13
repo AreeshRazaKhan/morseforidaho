@@ -66,16 +66,24 @@ const SiteNav = () => {
 
           {/* Desktop link list */}
           <ul className="hidden lg:flex items-center gap-6 lg:gap-8">
-            {NAV_LINKS.map((link) => (
-              <li key={link.href}>
-                <Link
-                  href={link.href}
-                  className="block py-4 px-1 text-[12px] tracking-[1.6px] uppercase text-parchment/60 font-semibold hover:text-gold transition-colors"
-                >
-                  {link.label}
-                </Link>
-              </li>
-            ))}
+            {NAV_LINKS.map((link) => {
+              const active = pathname === link.href || pathname?.startsWith(link.href + '/')
+              return (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    aria-current={active ? 'page' : undefined}
+                    className={`relative block py-4 px-1 text-[12px] tracking-[1.6px] uppercase font-semibold transition-colors ${
+                      active
+                        ? 'text-gold after:absolute after:left-0 after:right-0 after:bottom-2 after:h-px after:bg-gold'
+                        : 'text-parchment/60 hover:text-gold'
+                    }`}
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              )
+            })}
           </ul>
 
           {/* Desktop CTA */}
@@ -163,31 +171,43 @@ const SiteNav = () => {
             </div>
 
             <ul className="space-y-1">
-              {NAV_LINKS.map((link, i) => (
-                <li
-                  key={link.href}
-                  className="border-b border-gold/10 last:border-0"
-                >
-                  <Link
-                    href={link.href}
-                    onClick={() => setOpen(false)}
-                    className="flex items-center gap-5 py-5 group"
+              {NAV_LINKS.map((link, i) => {
+                const active = pathname === link.href || pathname?.startsWith(link.href + '/')
+                return (
+                  <li
+                    key={link.href}
+                    className="border-b border-gold/10 last:border-0"
                   >
-                    <span className="font-display italic text-gold text-2xl font-bold shrink-0 w-10">
-                      {ROMAN[i]}
-                    </span>
-                    <span className="font-display text-parchment text-2xl font-bold group-hover:text-gold transition-colors flex-1">
-                      {link.label}
-                    </span>
-                    <span
-                      aria-hidden="true"
-                      className="text-gold/50 text-xl group-hover:text-gold group-hover:translate-x-1 transition-all"
+                    <Link
+                      href={link.href}
+                      onClick={() => setOpen(false)}
+                      aria-current={active ? 'page' : undefined}
+                      className="flex items-center gap-5 py-5 group"
                     >
-                      →
-                    </span>
-                  </Link>
-                </li>
-              ))}
+                      <span className="font-display italic text-gold text-2xl font-bold shrink-0 w-10">
+                        {ROMAN[i]}
+                      </span>
+                      <span
+                        className={`font-display text-2xl font-bold transition-colors flex-1 ${
+                          active ? 'text-gold' : 'text-parchment group-hover:text-gold'
+                        }`}
+                      >
+                        {link.label}
+                      </span>
+                      <span
+                        aria-hidden="true"
+                        className={`text-xl transition-all ${
+                          active
+                            ? 'text-gold translate-x-1'
+                            : 'text-gold/50 group-hover:text-gold group-hover:translate-x-1'
+                        }`}
+                      >
+                        →
+                      </span>
+                    </Link>
+                  </li>
+                )
+              })}
             </ul>
 
             <div className="mt-auto pt-10 border-t border-gold/15">

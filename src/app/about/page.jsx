@@ -75,12 +75,12 @@ const AboutPage = () => {
         <section className="relative bg-navy text-parchment overflow-hidden pt-[72px]">
           <div className="absolute inset-0 opacity-15" aria-hidden="true">
             <Image
-              src="https://images.unsplash.com/photo-1521747116042-5a810fda9664?q=80&w=1800&auto=format&fit=crop"
+              src="/idaho-sawtooth.webp"
               alt=""
               fill
               priority
               sizes="100vw"
-              className="object-cover"
+              className="object-cover object-top"
             />
           </div>
           <div
@@ -157,8 +157,8 @@ const AboutPage = () => {
             {/* Portrait — spans 5, tall, offset low */}
             <div className="col-span-12 lg:col-span-5 lg:row-span-2 relative bg-navy rounded-2xl min-h-[480px] md:min-h-[640px] overflow-hidden">
               <Image
-                src="https://images.unsplash.com/photo-1589829085413-56de8ae18c73?q=80&w=1200&auto=format&fit=crop"
-                alt="David Morse, candidate for Fourth District Judge, on the courthouse steps"
+                src="/david-morse-portrait.webp"
+                alt="David Morse, candidate for Fourth District Judge"
                 fill
                 sizes="(min-width: 1024px) 40vw, 100vw"
                 className="object-cover"

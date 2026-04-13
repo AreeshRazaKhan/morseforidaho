@@ -34,7 +34,7 @@ const EventsPage = async () => {
           title="The Docket."
           titleAccent="On the Road to May 19."
           dek="Courthouse steps, kitchen tables, veteran halls — every stop on the road between now and election day. Free and open to every registered Idaho voter."
-          backgroundImage="https://images.unsplash.com/photo-1521747116042-5a810fda9664?q=80&w=1800&auto=format&fit=crop"
+          backgroundImage="/boise-skyline.webp"
           watermark="VI"
           meta={[
             { label: 'Total Stops', value: `${events.length} · Upcoming` },

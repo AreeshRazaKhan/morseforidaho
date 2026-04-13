@@ -43,7 +43,7 @@ const AskMorsePage = () => {
           title="Ask"
           titleAccent="Morse."
           dek="Every question is read. Selected answers are published here ahead of Election Day — no political consultants, no canned responses. Just David, a serif font, and the same standard he brings to the bench."
-          backgroundImage="https://images.unsplash.com/photo-1589829085413-56de8ae18c73?q=80&w=1800&auto=format&fit=crop"
+          backgroundImage="/idaho-sawtooth.webp"
           watermark="?"
           watermarkItalic={false}
           meta={[

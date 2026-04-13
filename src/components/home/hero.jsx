@@ -4,10 +4,10 @@ import Link from 'next/link'
 const Hero = () => {
   return (
     <section className="relative bg-navy text-parchment overflow-hidden pt-[72px]">
-      {/* Ambient background image — courtroom mood, deeply recessed */}
-      <div className="absolute inset-0 opacity-20 mix-blend-luminosity" aria-hidden="true">
+      {/* Ambient background — American flag, deeply recessed */}
+      <div className="absolute inset-0 opacity-25 mix-blend-luminosity" aria-hidden="true">
         <Image
-          src="https://images.unsplash.com/photo-1521747116042-5a810fda9664?q=80&w=1800&auto=format&fit=crop"
+          src="/american-flag.jpg"
           alt=""
           fill
           priority
@@ -17,7 +17,7 @@ const Hero = () => {
       </div>
       <div
         aria-hidden="true"
-        className="absolute inset-0 bg-gradient-to-b from-navy/60 via-navy/80 to-navy"
+        className="absolute inset-0 bg-gradient-to-b from-navy/70 via-navy/85 to-navy"
       />
 
       {/* Double-rule frame */}
