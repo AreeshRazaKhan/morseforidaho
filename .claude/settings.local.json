@@ -47,7 +47,9 @@
       "Bash(grep -oE \"\\(Apr 16|Columbia County[^<]{0,40}\\)\")",
       "Bash(node:*)",
       "Bash(git check-ignore:*)",
-      "WebFetch(domain:drkahlforcongress.vercel.app)"
+      "WebFetch(domain:drkahlforcongress.vercel.app)",
+      "WebFetch(domain:morse.operation1776.online)",
+      "Bash(grep -oiE '[a-z0-9._%+-]+@[a-z0-9.-]+\\\\.[a-z]{2,}')"
     ]
   }
 }

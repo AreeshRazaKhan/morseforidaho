@@ -154,10 +154,10 @@ const ContactPage = () => {
                     II · By Email
                   </div>
                   <a
-                    href="mailto:info@morseforidaho.com"
+                    href="mailto:david@morseforidaho.com"
                     className="mt-2 block font-display font-bold text-navy text-2xl md:text-3xl hover:text-burgundy transition-colors break-all"
                   >
-                    info@morseforidaho.com
+                    david@morseforidaho.com
                   </a>
                   <div className="mt-2 text-[12px] tracking-[1.5px] uppercase text-ink-muted">
                     Replies within 48 hours

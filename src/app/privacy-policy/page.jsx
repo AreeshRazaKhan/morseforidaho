@@ -158,13 +158,13 @@ const PrivacyPolicyPage = () => {
                 <p>
                   <strong className="text-navy font-display">Data Deletion:</strong> You may
                   request deletion of your phone number and consent records by emailing
-                  info@morseforidaho.com or calling (508) 801-6634. Requests are processed
+                  david@morseforidaho.com or calling (508) 801-6634. Requests are processed
                   within 10 business days.
                 </p>
                 <p>
                   <strong className="text-navy font-display">Opt-Out:</strong> Reply "STOP" to
                   any message to immediately unsubscribe, or reply "HELP" for help. You may
-                  also contact us at info@morseforidaho.com. Opt-out requests are processed
+                  also contact us at david@morseforidaho.com. Opt-out requests are processed
                   within 10 business days.
                 </p>
               </LegalSection>
@@ -240,10 +240,10 @@ const PrivacyPolicyPage = () => {
                     <div>P.O. Box 1776, Boise, ID 83701</div>
                     <div>
                       <a
-                        href="mailto:info@morseforidaho.com"
+                        href="mailto:david@morseforidaho.com"
                         className="inline-block py-2 text-burgundy hover:text-burgundy-deep underline-offset-4 hover:underline"
                       >
-                        info@morseforidaho.com
+                        david@morseforidaho.com
                       </a>
                     </div>
                     <div>

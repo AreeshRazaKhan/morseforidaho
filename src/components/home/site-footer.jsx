@@ -52,10 +52,10 @@ const SiteFooter = () => {
                 Email
               </div>
               <a
-                href="mailto:info@morseforidaho.com"
+                href="mailto:david@morseforidaho.com"
                 className="inline-block py-2 font-display text-parchment text-lg hover:text-gold transition-colors break-all"
               >
-                info@morseforidaho.com
+                david@morseforidaho.com
               </a>
             </li>
             <li>

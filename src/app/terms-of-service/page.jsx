@@ -97,7 +97,7 @@ const TermsOfServicePage = () => {
                 <p>
                   <strong className="text-navy font-display">HELP — Assistance:</strong> If you
                   experience issues with the messaging program, reply with the keyword "HELP"
-                  for more assistance, or reach out directly to info@morseforidaho.com or
+                  for more assistance, or reach out directly to david@morseforidaho.com or
                   (508) 801-6634.
                 </p>
                 <p>
@@ -195,10 +195,10 @@ const TermsOfServicePage = () => {
                     <div>P.O. Box 1776, Boise, ID 83701</div>
                     <div>
                       <a
-                        href="mailto:info@morseforidaho.com"
+                        href="mailto:david@morseforidaho.com"
                         className="inline-block py-2 text-burgundy hover:text-burgundy-deep underline-offset-4 hover:underline"
                       >
-                        info@morseforidaho.com
+                        david@morseforidaho.com
                       </a>
                     </div>
                     <div>
