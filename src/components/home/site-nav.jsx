@@ -9,11 +9,12 @@ const NAV_LINKS = [
   { label: 'About', href: '/about' },
   { label: 'Events', href: '/events' },
   { label: 'Volunteer', href: '/volunteer' },
+  { label: 'Donate', href: '/donate' },
   { label: 'Ask Morse', href: '/ask-morse' },
   { label: 'Contact', href: '/contact' },
 ]
 
-const ROMAN = ['I', 'II', 'III', 'IV', 'V']
+const ROMAN = ['I', 'II', 'III', 'IV', 'V', 'VI']
 
 const SiteNav = () => {
   const [open, setOpen] = useState(false)
@@ -51,7 +52,7 @@ const SiteNav = () => {
           <Link
             href="/"
             aria-label="Morse For Idaho — Home"
-            className="relative block h-[56px] w-[80px] md:h-[64px] md:w-[92px] -my-2"
+            className="relative block shrink-0 h-[56px] w-[80px] md:h-[64px] md:w-[92px] -my-2"
           >
             <Image
               src="/logo-morse.png"
@@ -64,7 +65,7 @@ const SiteNav = () => {
           </Link>
 
           {/* Desktop link list */}
-          <ul className="hidden md:flex items-center gap-6 lg:gap-8">
+          <ul className="hidden lg:flex items-center gap-6 lg:gap-8">
             {NAV_LINKS.map((link) => (
               <li key={link.href}>
                 <Link
@@ -80,7 +81,7 @@ const SiteNav = () => {
           {/* Desktop CTA */}
           <Link
             href="/volunteer"
-            className="hidden md:inline-flex bg-burgundy hover:bg-burgundy-deep text-parchment px-5 py-4 text-[12px] font-bold uppercase tracking-[1.5px] transition-colors"
+            className="hidden lg:inline-flex bg-burgundy hover:bg-burgundy-deep text-parchment px-5 py-4 text-[12px] font-bold uppercase tracking-[1.5px] transition-colors"
           >
             Join the Legacy →
           </Link>
@@ -92,7 +93,7 @@ const SiteNav = () => {
             aria-controls="mobile-nav-drawer"
             aria-label={open ? 'Close menu' : 'Open menu'}
             onClick={() => setOpen((v) => !v)}
-            className="md:hidden relative p-3 -mr-3 text-parchment hover:text-gold transition-colors cursor-pointer"
+            className="lg:hidden relative p-3 -mr-3 text-parchment hover:text-gold transition-colors cursor-pointer"
           >
             <span className="block w-6 h-5 relative" aria-hidden="true">
               <span
@@ -117,7 +118,7 @@ const SiteNav = () => {
 
       {/* Mobile drawer + backdrop */}
       <div
-        className={`fixed inset-0 z-40 md:hidden transition-opacity duration-300 ${
+        className={`fixed inset-0 z-40 lg:hidden transition-opacity duration-300 ${
           open ? 'opacity-100' : 'opacity-0 pointer-events-none'
         }`}
         aria-hidden={!open}

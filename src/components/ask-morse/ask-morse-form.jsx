@@ -3,6 +3,8 @@
 import Link from 'next/link'
 import { useState } from 'react'
 
+import { SMS_CONSENT } from '@/constants/a2p'
+
 const TOPICS = [
   'Judicial Philosophy',
   'Courtroom Experience',
@@ -22,18 +24,20 @@ const AskMorseForm = () => {
   const [form, setForm] = useState({
     name: '',
     email: '',
+    phone: '',
     location: '',
     category: '',
     subject: '',
     description: '',
+    sms_updates: false,
   })
   const [errors, setErrors] = useState({})
   const [status, setStatus] = useState('idle')
   const [errorMessage, setErrorMessage] = useState('')
 
   const onChange = (e) => {
-    const { name, value } = e.target
-    setForm((f) => ({ ...f, [name]: value }))
+    const { name, value, type, checked } = e.target
+    setForm((f) => ({ ...f, [name]: type === 'checkbox' ? checked : value }))
     if (errors[name]) setErrors((prev) => ({ ...prev, [name]: null }))
   }
 
@@ -67,7 +71,10 @@ const AskMorseForm = () => {
         return
       }
       setStatus('success')
-      setForm({ name: '', email: '', location: '', category: '', subject: '', description: '' })
+      setForm({
+        name: '', email: '', phone: '', location: '',
+        category: '', subject: '', description: '', sms_updates: false,
+      })
     } catch {
       setStatus('error')
       setErrorMessage('Network error — please try again.')
@@ -149,6 +156,20 @@ const AskMorseForm = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <label className="block">
             <span className="text-[12px] tracking-[2px] uppercase text-gold-muted font-bold">
+              Phone · Optional
+            </span>
+            <input
+              type="tel"
+              name="phone"
+              value={form.phone}
+              onChange={onChange}
+              className={fieldClass('phone')}
+              placeholder="(208) 555-0199"
+              disabled={status === 'submitting'}
+            />
+          </label>
+          <label className="block">
+            <span className="text-[12px] tracking-[2px] uppercase text-gold-muted font-bold">
               Location · Optional
             </span>
             <input
@@ -161,6 +182,9 @@ const AskMorseForm = () => {
               disabled={status === 'submitting'}
             />
           </label>
+        </div>
+
+        <div>
           <label className="block">
             <span className="flex items-center gap-2 text-[12px] tracking-[2px] uppercase text-gold-muted font-bold">
               <span className="size-1 rounded-full bg-gold" />
@@ -215,6 +239,23 @@ const AskMorseForm = () => {
           />
           {errors.description && <span className="mt-1 block text-[12px] text-burgundy-light">{errors.description}</span>}
         </label>
+
+        <fieldset className="pt-2">
+          <legend className="text-[12px] tracking-[2px] uppercase text-gold-muted font-bold mb-2">
+            SMS Consent · Optional
+          </legend>
+          <label className="flex items-start gap-3 text-parchment/60 text-[12px] leading-relaxed cursor-pointer">
+            <input
+              type="checkbox"
+              name="sms_updates"
+              checked={form.sms_updates}
+              onChange={onChange}
+              className="mt-0.5 shrink-0 accent-gold"
+              disabled={status === 'submitting'}
+            />
+            <span>{SMS_CONSENT}</span>
+          </label>
+        </fieldset>
 
         <div className="pt-4 border-t border-gold/15 flex flex-col md:flex-row md:items-center justify-between gap-6">
           <p className="text-[12px] text-parchment/50 leading-relaxed max-w-sm">

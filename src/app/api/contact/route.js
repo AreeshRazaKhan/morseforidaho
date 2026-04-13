@@ -25,7 +25,7 @@ export const POST = async (req) => {
       phone: (data.phone || '').trim(),
       message,
       sms_updates: yesNo(data.sms_updates),
-      sms_promo: yesNo(data.sms_promo),
+      sms_promo: 'No',
       source: 'src_contact',
       submitted_at: nowIso(),
     }

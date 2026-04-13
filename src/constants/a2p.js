@@ -8,6 +8,4 @@
 
 export const LEGAL_BUSINESS_NAME = 'Morse For Idaho'
 
-export const SMS_UPDATES_CONSENT = `I agree to receive SMS updates from ${LEGAL_BUSINESS_NAME} regarding campaign updates, event reminders, and volunteer coordination. Message frequency varies. Message & data rates may apply. Reply STOP to unsubscribe or HELP for help.`
-
-export const SMS_PROMO_CONSENT = `I agree to receive promotional SMS messages from ${LEGAL_BUSINESS_NAME}, including fundraising requests, donation drives, and event promotions. Message frequency varies. Message & data rates may apply. Reply STOP to unsubscribe or HELP for help.`
+export const SMS_CONSENT = `By providing your phone number, you consent to receive calls and text messages from ${LEGAL_BUSINESS_NAME}. Msg & data rates may apply. Msg frequency may vary. Messaging may include requests for donation. Reply STOP to unsubscribe or HELP for help. View Privacy Policy for more info.`

@@ -42,7 +42,7 @@ export const POST = async (req) => {
       issues: (data.issues || '').trim(),
       anythingElse: (data.anythingElse || '').trim(),
       sms_updates: yesNo(data.sms_updates),
-      sms_promo: yesNo(data.sms_promo),
+      sms_promo: 'No',
       source: 'src_volunteer',
       submitted_at: nowIso(),
     }

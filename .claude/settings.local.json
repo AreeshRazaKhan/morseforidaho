@@ -54,7 +54,13 @@
       "Bash(grep -oE '[^<>]{30,}')",
       "Bash(grep -E \"\\\\.\\(tsx?|jsx?\\)$\")",
       "Bash(xargs grep:*)",
-      "Bash(npm ls:*)"
+      "Bash(npm ls:*)",
+      "Bash(grep -rniE \"ask.{0,5}jenny|askjenny|ask-jenny|question\" src/ --include=\"*.jsx\" --include=\"*.js\")",
+      "Bash(mv 69c5808fea056f8fd5c7b177.png cashapp-qr.png)",
+      "Bash(mv 69c5808f6b0a705d942222d6.png zelle-qr.png)",
+      "Bash(mv 69c5808fe249815c721700bc.png venmo-qr.png)",
+      "Bash(rm 69c5706d81e6bc76bd68e38e.png 69c5865e9619acca9d8dfbb9.png)",
+      "Bash(cygpath -w /tmp/playwright-test-donate.js)"
     ]
   }
 }

@@ -37,7 +37,7 @@ export const POST = async (req) => {
       // A2P 10DLC compliance: consent is required on every form that
       // collects phone numbers. Sent as 'Yes'/'No' strings per rule §2.
       sms_updates: yesNo(data.sms_updates),
-      sms_promo: yesNo(data.sms_promo),
+      sms_promo: 'No',
       source: 'src_event',
       submitted_at: nowIso(),
     }

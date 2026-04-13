@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import { useState } from 'react'
 
-import { SMS_UPDATES_CONSENT, SMS_PROMO_CONSENT } from '@/constants/a2p'
+import { SMS_CONSENT } from '@/constants/a2p'
 
 // Values below are locked to .claude/rules/ghl-forms-webhooks.md §2.
 // Do not edit the string values without updating the GHL workflow tags.
@@ -60,7 +60,6 @@ const initial = {
   issues: '',
   anythingElse: '',
   sms_updates: false,
-  sms_promo: false,
 }
 
 const VolunteerForm = () => {
@@ -325,25 +324,22 @@ const VolunteerForm = () => {
             disabled={status === 'submitting'} />
         </label>
 
-        <fieldset className="space-y-4 pt-2">
+        <fieldset className="pt-2">
           <legend className="text-[12px] tracking-[2px] uppercase text-gold-muted font-bold mb-2">
             SMS Consent · Optional
           </legend>
           <label className="flex items-start gap-3 text-parchment/60 text-[12px] leading-relaxed cursor-pointer">
             <input type="checkbox" name="sms_updates" checked={form.sms_updates} onChange={onChange}
               className="mt-0.5 shrink-0 accent-gold" />
-            <span>{SMS_UPDATES_CONSENT}</span>
-          </label>
-          <label className="flex items-start gap-3 text-parchment/60 text-[12px] leading-relaxed cursor-pointer">
-            <input type="checkbox" name="sms_promo" checked={form.sms_promo} onChange={onChange}
-              className="mt-0.5 shrink-0 accent-gold" />
-            <span>{SMS_PROMO_CONSENT}</span>
+            <span>{SMS_CONSENT}</span>
           </label>
         </fieldset>
 
         <div className="pt-4 border-t border-gold/15 flex flex-col md:flex-row md:items-center justify-between gap-6">
           <p className="text-[12px] text-parchment/50 leading-relaxed max-w-sm">
-            Your information goes directly to the organizing team. See the{' '}
+            By submitting you agree to the{' '}
+            <Link href="/terms-of-service" className="text-gold hover:underline">Terms of Service</Link>{' '}
+            and{' '}
             <Link href="/privacy-policy" className="text-gold hover:underline">Privacy Policy</Link>.
           </p>
           <button

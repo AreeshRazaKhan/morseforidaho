@@ -147,9 +147,11 @@
   body {
     @apply bg-parchment text-ink;
     font-family: var(--font-body), Georgia, serif;
+    overflow-x: clip;
   }
   html {
     scroll-behavior: smooth;
+    overflow-x: clip;
   }
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-display), Georgia, serif;

@@ -6,7 +6,7 @@ import LegalSection from '@/components/legal/legal-section'
 export const metadata = {
   title: 'Privacy Policy — Morse For Idaho',
   description:
-    'How Morse For Idaho collects, uses, discloses, and safeguards personal information.',
+    'How Morse For Idaho collects, uses, and safeguards your personal information.',
 }
 
 const PrivacyPolicyPage = () => {
@@ -17,241 +17,156 @@ const PrivacyPolicyPage = () => {
         <LegalHero
           chapter="Chapter · The Covenant · Privacy"
           title="Privacy Policy."
-          effectiveDate="April 12, 2026"
+          effectiveDate="April 13, 2026"
         />
 
         <section className="relative bg-parchment py-24 md:py-32">
           <div className="relative mx-auto max-w-[1400px] px-6 md:px-12 lg:px-20">
             <p className="font-display italic text-navy text-xl md:text-2xl leading-[1.5] max-w-3xl border-l-[3px] border-gold pl-6 py-2">
-              <span className="text-gold">Morse For Idaho</span> operates this website and is
-              committed to protecting visitor privacy. This policy outlines how personal
-              information is collected, used, disclosed, and safeguarded per the Oregon
-              Consumer Privacy Act (OCPA), Oregon campaign finance law (ORS Chapter 260), the
-              CAN-SPAM Act, and federal laws.
-            </p>
-            <p className="mt-8 text-ink-soft text-base md:text-lg max-w-3xl leading-[1.8]">
-              By accessing the website, you consent to these practices.
+              <span className="text-gold">Morse For Idaho</span> ("the Campaign,"
+              "we," "us," or "our") is committed to protecting your privacy. This
+              Privacy Policy describes how we collect, use, and safeguard your
+              personal information when you visit our website or interact with our
+              campaign.
             </p>
 
             <div className="mt-24 space-y-16">
               <LegalSection numeral="I" title="Information We Collect">
-                <h3 className="font-display text-navy text-xl font-bold">
-                  1.1 · Information You Provide
-                </h3>
                 <ul className="space-y-3 list-none pl-0">
                   <li>
-                    <strong className="text-navy font-display">Contact Information:</strong>{' '}
-                    Name, email, phone, mailing address from forms.
+                    <strong className="text-navy font-display">
+                      Contact Information:
+                    </strong>{' '}
+                    Name, email address, phone number, and mailing address you
+                    voluntarily provide through forms on our website.
                   </li>
                   <li>
                     <strong className="text-navy font-display">
-                      Contribution Information:
+                      Volunteer Preferences:
                     </strong>{' '}
-                    Payment details and contributor information required by campaign finance
-                    law.
+                    Information about how you'd like to support the campaign.
                   </li>
                   <li>
                     <strong className="text-navy font-display">
-                      User-Submitted Content:
+                      Donation Information:
                     </strong>{' '}
-                    Comments and feedback via the website.
+                    Records of donations made through third-party payment platforms
+                    (Venmo, Clover, Zelle, Cash App). We do not directly process or
+                    store payment card information.
                   </li>
                   <li>
-                    <strong className="text-navy font-display">
-                      Text Messaging Opt-In Data:
-                    </strong>{' '}
-                    Not shared or sold with third parties unless legally required.
+                    <strong className="text-navy font-display">Usage Data:</strong>{' '}
+                    Non-personal information such as browser type, device type,
+                    pages visited, and time spent on our site, collected through
+                    standard analytics tools.
                   </li>
                 </ul>
-
-                <h3 className="font-display text-navy text-xl font-bold pt-4">
-                  1.2 · Information Collected Automatically
-                </h3>
-                <ul className="space-y-3 list-none pl-0">
-                  <li>
-                    <strong className="text-navy font-display">Usage Data:</strong> IP address,
-                    browser type, device information, pages visited, time spent, referrer URLs.
-                  </li>
-                  <li>
-                    <strong className="text-navy font-display">Analytics Data:</strong> User
-                    interaction aggregates via Google Analytics.
-                  </li>
-                </ul>
-                <p>
-                  Cookies can be disabled through browser settings but may limit functionality.
-                </p>
               </LegalSection>
 
               <LegalSection numeral="II" title="How We Use Your Information">
                 <ul className="space-y-3 list-none pl-0">
-                  <li>· Campaign operations and event communication</li>
-                  <li>· Campaign finance law compliance and contribution reporting</li>
-                  <li>· Marketing and outreach via newsletters (CAN-SPAM compliant)</li>
-                  <li>· Website improvement and accessibility analysis</li>
-                  <li>· Legal obligations and government authority requests</li>
+                  <li>
+                    · To communicate with you about campaign news, events, and
+                    volunteer opportunities.
+                  </li>
+                  <li>
+                    · To send you text messages and calls if you have opted in to
+                    receive them.
+                  </li>
+                  <li>· To process and acknowledge donations.</li>
+                  <li>
+                    · To comply with applicable campaign finance reporting
+                    requirements.
+                  </li>
+                  <li>· To improve our website and campaign outreach efforts.</li>
                 </ul>
+              </LegalSection>
+
+              <LegalSection numeral="III" title="Text Messaging & TCPA Consent">
                 <p>
-                  Morse For Idaho does not engage in targeted advertising or sell personal
-                  information.
+                  By providing your phone number and checking the consent box on
+                  our forms, you expressly consent to receive recurring autodialed
+                  or prerecorded calls and text messages from Morse For Idaho at
+                  the phone number you provided. Message and data rates may apply.
+                  Message frequency varies. You may opt out at any time by replying
+                  STOP to any message. Consent is not a condition of any purchase,
+                  donation, or volunteering.
                 </p>
               </LegalSection>
 
-              <LegalSection numeral="III" title="How We Share Your Information">
-                <ul className="space-y-3 list-none pl-0">
-                  <li>
-                    <strong className="text-navy font-display">Service Providers:</strong>{' '}
-                    Payment processors and email providers under confidentiality agreements.
-                  </li>
-                  <li>
-                    <strong className="text-navy font-display">Legal Compliance:</strong>{' '}
-                    State election authorities for reporting; law enforcement when required.
-                  </li>
-                  <li>
-                    <strong className="text-navy font-display">Public Disclosure:</strong>{' '}
-                    Contributor information per campaign finance law requirements.
-                  </li>
-                  <li>
-                    <strong className="text-navy font-display">Aggregated Data:</strong>{' '}
-                    Non-identifiable data with analytics providers.
-                  </li>
-                </ul>
+              <LegalSection numeral="IV" title="Information Sharing">
                 <p>
-                  No sharing occurs with unaffiliated third parties for commercial purposes.
-                </p>
-              </LegalSection>
-
-              <LegalSection numeral="IV" title="SMS / Text Messaging Privacy">
-                <p>
-                  <strong className="text-navy font-display">What phone numbers are collected for:</strong>{' '}
-                  Phone numbers are collected through the website's opt-in forms (contact,
-                  volunteer, event RSVP) so that Morse For Idaho can send the specific
-                  categories of messages the user has consented to receive. Providing a phone
-                  number alone does not constitute consent — the user must also tick the
-                  corresponding SMS consent checkbox.
-                </p>
-                <p>
-                  <strong className="text-navy font-display">How they are used for SMS:</strong>{' '}
-                  Phone numbers collected via SMS consent checkboxes are used solely for the
-                  opted-in message types. Informational consent authorizes campaign updates,
-                  event reminders, and volunteer coordination messages. Promotional consent
-                  authorizes fundraising requests, donation drives, and event promotions.
-                  Consent for one category does not authorize the other.
-                </p>
-                <p>
-                  <strong className="text-navy font-display">Types of messages sent:</strong>{' '}
-                  Campaign updates, event invitations, volunteer opportunities, donation
-                  requests, and voter engagement messages. Message frequency varies; message
-                  and data rates may apply.
+                  We do not sell, rent, or trade your personal information to third
+                  parties.
                 </p>
                 <p className="bg-parchment-2 border-l-[3px] border-gold pl-5 py-3 rounded-r">
-                  <strong className="text-navy font-display">No sharing with third parties:</strong>{' '}
-                  We will not share or sell your text messaging opt-in data, consent, or
-                  related personal information with any third parties, unless required by law.
+                  <strong className="text-navy font-display">
+                    Text Messaging Opt-In Data:
+                  </strong>{' '}
+                  We will not share or sell your text messaging opt-in data,
+                  consent, or related personal information with any third parties,
+                  unless required by law.
                 </p>
                 <p>
-                  <strong className="text-navy font-display">Data Retention:</strong> Phone
-                  numbers and consent records are retained for the duration of the campaign
-                  plus a reasonable post-campaign period for legal compliance (typically two
-                  years), after which they are deleted unless longer retention is required by
-                  law.
-                </p>
-                <p>
-                  <strong className="text-navy font-display">Data Deletion:</strong> You may
-                  request deletion of your phone number and consent records by emailing
-                  david@morseforidaho.com or calling (508) 801-6634. Requests are processed
-                  within 10 business days.
-                </p>
-                <p>
-                  <strong className="text-navy font-display">Opt-Out:</strong> Reply "STOP" to
-                  any message to immediately unsubscribe, or reply "HELP" for help. You may
-                  also contact us at david@morseforidaho.com. Opt-out requests are processed
-                  within 10 business days.
+                  We may share your information with trusted service providers who
+                  assist us in operating our website and conducting campaign
+                  activities, subject to confidentiality obligations. We may also
+                  disclose information as required by law, including campaign
+                  finance disclosure requirements.
                 </p>
               </LegalSection>
 
-              <LegalSection numeral="V" title="Your Privacy Rights">
-                <p>Eligible residents may request:</p>
+              <LegalSection numeral="V" title="Data Security">
+                <p>
+                  We implement reasonable administrative, technical, and physical
+                  safeguards to protect your personal information. However, no
+                  method of transmission over the Internet or electronic storage is
+                  completely secure, and we cannot guarantee absolute security.
+                </p>
+              </LegalSection>
+
+              <LegalSection numeral="VI" title="Your Rights">
+                <p>You have the right to:</p>
                 <ul className="space-y-3 list-none pl-0">
-                  <li>· Access confirmation and copies of personal information</li>
-                  <li>· Correction of inaccurate information</li>
-                  <li>· Deletion (subject to campaign finance reporting exemptions)</li>
-                  <li>· Opt-out of targeted advertising, data sales, or profiling</li>
-                  <li>· Data portability in machine-readable format</li>
-                </ul>
-                <p>
-                  Responses provided within 45 days; complex requests may be extended as
-                  permitted by law.
-                </p>
-              </LegalSection>
-
-              <LegalSection numeral="VI" title="Data Security">
-                <p>
-                  Safeguards include encryption via PCI DSS-compliant processors, secure
-                  contributor information storage per applicable regulations, and regular
-                  security assessments. However, no system guarantees absolute security.
-                </p>
-              </LegalSection>
-
-              <LegalSection numeral="VII" title="Data Retention">
-                <p>Information retained only as necessary or per legal requirements:</p>
-                <ul className="space-y-3 list-none pl-0">
-                  <li>· Contribution records per campaign finance law</li>
-                  <li>· Newsletter contacts until unsubscription</li>
-                  <li>· Usage data anonymized where possible</li>
+                  <li>
+                    · Request access to the personal information we hold about you.
+                  </li>
+                  <li>
+                    · Request correction or deletion of your personal information.
+                  </li>
+                  <li>
+                    · Opt out of receiving communications at any time by contacting
+                    us or replying STOP to text messages.
+                  </li>
                 </ul>
               </LegalSection>
 
-              <LegalSection numeral="VIII" title="Third-Party Links">
+              <LegalSection numeral="VII" title="Contact Us">
                 <p>
-                  The website may link to external sites. Morse For Idaho is not responsible
-                  for their privacy practices.
+                  If you have questions about this Privacy Policy or your personal
+                  information, please contact us at:
                 </p>
-              </LegalSection>
-
-              <LegalSection numeral="IX" title="Children's Privacy">
-                <p>
-                  The website is not directed to individuals under 13. Parental consent is
-                  required for under-13 information collection per the Children's Online
-                  Privacy Protection Act. Minor contributions must comply with applicable
-                  campaign finance laws.
-                </p>
-              </LegalSection>
-
-              <LegalSection numeral="X" title="Accessibility">
-                <p>
-                  Morse For Idaho strives for accessibility per Section 508 of the
-                  Rehabilitation Act and the Americans with Disabilities Act.
-                </p>
-              </LegalSection>
-
-              <LegalSection numeral="XI" title="Changes to This Privacy Policy">
-                <p>
-                  Updates posted with a revised "Last Updated" date. Email notification may
-                  occur for material changes. Continued use constitutes acceptance.
-                </p>
-              </LegalSection>
-
-              <LegalSection numeral="XII" title="Contact Information">
                 <div className="bg-parchment-2 border-l-[3px] border-gold p-8 rounded-r-xl not-prose">
                   <div className="font-display text-navy text-2xl font-bold">
                     Morse For Idaho
                   </div>
                   <div className="mt-4 space-y-1 text-ink">
-                    <div>P.O. Box 171101, Boise, ID 83716</div>
-                    <div>
-                      <a
-                        href="mailto:david@morseforidaho.com"
-                        className="inline-block py-2 text-burgundy hover:text-burgundy-deep underline-offset-4 hover:underline"
-                      >
-                        david@morseforidaho.com
-                      </a>
-                    </div>
+                    <div>PO Box 171101</div>
+                    <div>Boise, Idaho 83717</div>
                     <div>
                       <a
                         href="tel:+15088016634"
                         className="inline-block py-2 text-burgundy hover:text-burgundy-deep underline-offset-4 hover:underline"
                       >
                         (508) 801-6634
+                      </a>
+                    </div>
+                    <div>
+                      <a
+                        href="mailto:david@morseforidaho.com"
+                        className="inline-block py-2 text-burgundy hover:text-burgundy-deep underline-offset-4 hover:underline"
+                      >
+                        david@morseforidaho.com
                       </a>
                     </div>
                   </div>

@@ -1,4 +1,4 @@
-import { nowIso } from '@/lib/ghl'
+import { nowIso, yesNo } from '@/lib/ghl'
 
 // Per .claude/rules/ghl-forms-webhooks.md the Ask Morse form is the
 // Issue Report form renamed — payload type/source stay as Issue_Report.
@@ -28,11 +28,14 @@ export const POST = async (req) => {
       firstName,
       lastName,
       email,
+      phone: (data.phone || '').trim(),
       issue_category: (data.category || '').trim(),
       issue_location: (data.location || '').trim(),
       issue_subject: subject,
       issue_description: description,
       issue_image: '',
+      sms_updates: yesNo(data.sms_updates),
+      sms_promo: 'No',
       source: 'src_issue',
       submitted_at: nowIso(),
     }
