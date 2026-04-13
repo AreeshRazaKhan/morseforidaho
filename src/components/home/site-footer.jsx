@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 
 const SiteFooter = () => {
@@ -5,10 +6,20 @@ const SiteFooter = () => {
     <footer className="bg-navy-ink text-parchment/70 border-t border-gold/20">
       <div className="mx-auto max-w-[1400px] px-6 md:px-12 lg:px-20 py-20 grid grid-cols-12 gap-8">
         <div className="col-span-12 md:col-span-4">
-          <div className="font-display text-gold text-3xl font-bold tracking-[0.2em]">
-            MORSE
-          </div>
-          <div className="mt-2 h-px w-20 bg-gold" />
+          <Link
+            href="/"
+            aria-label="Morse For Idaho — Home"
+            className="relative block h-[110px] w-[158px]"
+          >
+            <Image
+              src="/logo-morse.png"
+              alt="Morse For Idaho"
+              fill
+              sizes="158px"
+              className="object-contain object-left"
+            />
+          </Link>
+          <div className="mt-4 h-px w-20 bg-gold" />
           <div className="mt-3 text-[12px] font-bold uppercase tracking-[2.5px] text-parchment/60">
             Fourth District Judge · Idaho
           </div>

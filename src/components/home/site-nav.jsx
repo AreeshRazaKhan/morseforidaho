@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useEffect, useState } from 'react'
@@ -49,9 +50,17 @@ const SiteNav = () => {
         <nav className="mx-auto max-w-[1400px] h-full px-5 md:px-12 lg:px-20 flex items-center justify-between gap-4">
           <Link
             href="/"
-            className="font-display text-gold text-xl md:text-2xl font-bold tracking-[0.25em] py-4 -my-4"
+            aria-label="Morse For Idaho — Home"
+            className="relative block h-[56px] w-[80px] md:h-[64px] md:w-[92px] -my-2"
           >
-            MORSE
+            <Image
+              src="/logo-morse.png"
+              alt="Morse For Idaho"
+              fill
+              sizes="92px"
+              priority
+              className="object-contain"
+            />
           </Link>
 
           {/* Desktop link list */}
