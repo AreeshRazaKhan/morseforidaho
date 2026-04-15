@@ -118,9 +118,10 @@ const AboutPage = () => {
                   <span className="italic text-gold font-medium">David Morse.</span>
                 </h1>
                 <p className="mt-10 max-w-2xl text-base md:text-lg text-parchment/75 leading-[1.8]">
-                  Assistant United States Attorney. Former Deputy Attorney General. Marine.
-                  University of Idaho lawyer. A career earned one case at a time, built on
-                  one measure — did the outcome honor the Constitution?
+                  Assistant United States Attorney. Former Deputy Attorney General. U.S.
+                  Marine Corps veteran. University of Idaho College of Law. Experienced
+                  federal and state prosecutor committed to fairness, integrity, and the
+                  rule of law for Ada, Boise, Elmore, and Valley Counties.
                 </p>
               </div>
 
@@ -174,9 +175,8 @@ const AboutPage = () => {
                   Portrait · The Candidate
                 </div>
                 <div className="font-display font-bold text-parchment text-3xl md:text-4xl leading-tight">
-                  The bench is a trust,
-                  <br />
-                  <span className="italic text-gold font-medium">not a platform.</span>
+                  Experienced. Ethical.{' '}
+                  <span className="italic text-gold font-medium">Fair.</span>
                 </div>
               </div>
             </div>
@@ -190,23 +190,27 @@ const AboutPage = () => {
                 </span>
               </div>
               <h2 className="font-display font-bold text-navy leading-[1.05] text-[clamp(40px,5vw,72px)] max-w-2xl">
-                Raised on the <span className="italic text-burgundy font-medium">quiet conviction</span> that character is earned.
+                Meet <span className="italic text-burgundy font-medium">David Morse.</span>
               </h2>
 
               <p className="mt-12 font-body text-lg leading-[1.85] text-ink-soft first-letter:font-display first-letter:font-bold first-letter:italic first-letter:text-[96px] first-letter:leading-[0.82] first-letter:float-left first-letter:pr-4 first-letter:pt-2 first-letter:text-burgundy">
                 David Morse is an Assistant United States Attorney in the District of Idaho.
                 Every day, he prosecutes serious federal crimes — drug trafficking, firearms
-                offenses, fraud, and identity theft — to keep Idaho families safe. It is work
-                that demands preparation, discipline, and a steady commitment to the law as
-                written.
+                offenses, fraud, and identity theft — to keep Idaho families safe.
               </p>
 
               <p className="mt-6 text-base md:text-lg text-ink-soft leading-[1.85] max-w-[65ch]">
-                His career has been built in courtrooms, not newsrooms. Trial and appellate.
-                State and federal. Heavy dockets, intricate evidentiary issues, and complex
-                constitutional questions — including a Fifth Amendment argument before the
-                Ninth Circuit Court of Appeals. That depth of courtroom experience is the
-                foundation he brings to the Fourth District bench.
+                Before joining the U.S. Attorney's Office, David served as a Deputy Attorney
+                General in Idaho's Special Prosecutions Unit. There he prosecuted public
+                corruption, insurance fraud, and violent crime, holding both government
+                officials and private citizens equally accountable under the law.
+              </p>
+
+              <p className="mt-6 text-base md:text-lg text-ink-soft leading-[1.85] max-w-[65ch]">
+                David has handled complex felony cases across trial and appellate courts,
+                including arguing a Fifth Amendment issue before the Ninth Circuit Court of
+                Appeals. This depth of courtroom experience has given him firsthand knowledge
+                of the constitutional principles a judge must apply every day.
               </p>
             </article>
 
@@ -303,58 +307,6 @@ const AboutPage = () => {
                 </li>
               ))}
             </ol>
-          </div>
-        </section>
-
-        {/* ═══════ PULL QUOTE ═══════ */}
-        <section className="relative bg-parchment-2 overflow-hidden py-32 md:py-40">
-          <span
-            aria-hidden="true"
-            className="pointer-events-none absolute top-0 left-0 font-display font-extrabold italic text-[220px] md:text-[360px] leading-none text-parchment-3 select-none"
-          >
-            "
-          </span>
-
-          <div className="relative mx-auto max-w-[1400px] px-6 md:px-12 lg:px-20">
-            <div className="flex items-center gap-4 mb-8">
-              <span className="h-px w-10 bg-burgundy" />
-              <span className="text-xs font-bold uppercase tracking-[3px] text-burgundy">
-                Chapter · III · The Measure
-              </span>
-            </div>
-
-            <blockquote className="border-l-[3px] border-gold pl-8 py-2 max-w-4xl">
-              <p className="font-display italic text-navy text-3xl md:text-5xl leading-[1.2]">
-                <span className="text-gold">Every ruling measured</span> against one question:
-                is this faithful to the law and fair to the people standing before the court?
-              </p>
-            </blockquote>
-
-            <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 border-t border-parchment-3 pt-12">
-              {[
-                {
-                  t: 'Trial Courts',
-                  d: 'Heavy dockets, intricate evidentiary issues, and well-reasoned decisions rendered efficiently.',
-                },
-                {
-                  t: 'Appellate Work',
-                  d: 'Fifth Amendment argument before the Ninth Circuit Court of Appeals — constitutional principles applied.',
-                },
-                {
-                  t: 'Special Prosecutions',
-                  d: 'Public corruption, insurance fraud, and violent crime — equal accountability under the law.',
-                },
-              ].map((x) => (
-                <div key={x.t}>
-                  <div className="text-[12px] tracking-[2px] uppercase text-gold-muted font-bold">
-                    {x.t}
-                  </div>
-                  <p className="mt-3 text-ink-soft text-[15px] leading-[1.75] max-w-xs">
-                    {x.d}
-                  </p>
-                </div>
-              ))}
-            </div>
           </div>
         </section>
 

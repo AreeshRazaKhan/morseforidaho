@@ -154,13 +154,6 @@ const VolunteerPage = () => {
                 The campaign will route you to the right organizer within two business days.
                 You'll hear from a real person — not a robot.
               </p>
-
-              <blockquote className="mt-12 border-l-[3px] border-gold pl-6 py-2 max-w-md">
-                <p className="font-display italic text-parchment/90 text-lg leading-[1.5]">
-                  <span className="text-gold">Every door knocked</span> is a vote of
-                  confidence in a courtroom that works.
-                </p>
-              </blockquote>
             </div>
 
             <VolunteerForm />

@@ -75,17 +75,9 @@ const DonatePage = () => {
             </div>
 
             <div className="col-span-12 lg:col-span-4 lg:pt-10">
-              <div className="border-l-[3px] border-gold pl-6 py-2">
-                <p className="font-display italic text-parchment text-2xl md:text-3xl leading-[1.35]">
-                  <span className="text-gold">"Every dollar</span> is a vote for
-                  a courtroom run with humility, experience, and the rule of
-                  law."
-                </p>
-              </div>
-              <p className="mt-10 text-parchment/65 text-[15px] leading-[1.85] max-w-sm">
-                Contributions fuel yard signs, community events, and the work
-                of carrying David's message to every corner of the Fourth
-                District.
+              <p className="text-parchment/85 text-base md:text-lg leading-[1.8] max-w-sm">
+                Every dollar fuels our fight for experienced, ethical, and fair leadership
+                on the bench. Contribute today.
               </p>
             </div>
           </div>
@@ -231,7 +223,7 @@ const DonatePage = () => {
             <div className="mt-12 grid grid-cols-12 gap-y-6 md:gap-6 items-center">
               <div className="col-span-12 md:col-span-7 flex items-center gap-6">
                 <span className="h-px w-16 bg-gold shrink-0" />
-                <p className="font-display italic text-navy text-xl md:text-2xl leading-snug">
+                <p className="text-navy text-base md:text-lg leading-snug">
                   Any amount, any time. Name your own contribution.
                 </p>
               </div>
@@ -383,11 +375,9 @@ const DonatePage = () => {
                 still works.
               </h2>
               <p className="mt-8 text-ink-soft text-[15px] leading-[1.85] max-w-sm">
-                Prefer pen and paper? So does David. Mail a check payable to{' '}
-                <span className="font-display italic text-navy font-bold">
-                  "Morse For Idaho"
-                </span>{' '}
-                to the campaign PO box.
+                Mail a check payable to{' '}
+                <span className="font-bold text-navy">Morse For Idaho</span> to the campaign
+                PO box.
               </p>
             </div>
 
@@ -417,12 +407,9 @@ const DonatePage = () => {
                     Boise, Idaho 83717
                   </div>
                   <div className="mt-8 h-px w-24 bg-gold" />
-                  <p className="mt-5 font-display italic text-ink-soft text-sm md:text-base leading-[1.7] max-w-md">
+                  <p className="mt-5 text-ink-soft text-sm md:text-base leading-[1.7] max-w-md">
                     Make checks payable to{' '}
-                    <span className="not-italic font-bold text-navy">
-                      "Morse For Idaho"
-                    </span>
-                    .
+                    <span className="font-bold text-navy">Morse For Idaho</span>.
                   </p>
                 </div>
               </div>

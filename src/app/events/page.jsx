@@ -66,9 +66,9 @@ const EventsPage = async () => {
                 <div className="text-[12px] tracking-[2.5px] uppercase text-gold-muted font-bold">
                   No upcoming stops
                 </div>
-                <p className="mt-4 font-display italic text-navy text-2xl leading-snug">
-                  The docket is between chapters. Check back soon — new stops are
-                  added weekly as the road to May 19 unfolds.
+                <p className="mt-4 text-ink-soft text-base leading-[1.75]">
+                  No upcoming stops are on the calendar right now. Check back soon — new
+                  stops are added as the campaign travels the Fourth District.
                 </p>
               </div>
             ) : (

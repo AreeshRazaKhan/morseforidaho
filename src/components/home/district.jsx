@@ -85,10 +85,14 @@ const District = () => {
             </div>
           </div>
 
-          {/* Quote tile */}
-          <div className="bg-burgundy text-parchment rounded-2xl p-8 min-h-[180px] flex items-end">
-            <p className="font-display italic text-lg md:text-xl leading-snug">
-              "Humility. Efficiency. A steady commitment to the rule of law."
+          {/* Values tile */}
+          <div className="bg-burgundy text-parchment rounded-2xl p-8 min-h-[180px] flex flex-col justify-end">
+            <span className="text-[12px] tracking-[2.5px] uppercase text-gold font-bold">
+              What the Bench Demands
+            </span>
+            <p className="mt-3 text-parchment text-base leading-[1.7]">
+              Judges must combine deep legal experience with humility, efficiency, and a
+              steady commitment to the rule of law.
             </p>
           </div>
 

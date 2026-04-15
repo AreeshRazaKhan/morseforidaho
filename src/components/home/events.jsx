@@ -64,9 +64,9 @@ const Events = async () => {
             <div className="text-[12px] tracking-[2.5px] uppercase text-gold font-bold">
               No upcoming stops
             </div>
-            <p className="mt-4 font-display italic text-parchment text-2xl leading-snug">
-              The docket is between chapters. Check back soon — new stops are added
-              weekly on the road to May 19.
+            <p className="mt-4 text-parchment/85 text-base leading-[1.75]">
+              No upcoming stops are on the calendar right now. Check back soon — new stops
+              are added as the campaign travels the Fourth District.
             </p>
             <Link
               href="/events"
@@ -196,22 +196,14 @@ const Events = async () => {
           </>
         )}
 
-        {/* Bottom pull quote */}
-        <div className="mt-28 md:mt-36 grid grid-cols-12 gap-y-8 md:gap-8 items-center border-t border-gold/15 pt-12">
-          <blockquote className="col-span-12 lg:col-span-7 border-l-[3px] border-gold pl-6 py-1">
-            <p className="font-display italic text-xl md:text-2xl text-parchment/90 leading-[1.45]">
-              <span className="text-gold">Free and open</span> to every registered Idaho
-              voter — accessible venues, hearing assistance on request, neighbors welcome.
-            </p>
-          </blockquote>
-          <div className="col-span-12 lg:col-span-5 lg:text-right">
-            <Link
-              href="/events"
-              className="inline-flex items-center gap-3 bg-burgundy hover:bg-burgundy-deep text-parchment px-8 py-5 text-xs font-bold uppercase tracking-[1.8px] transition-colors"
-            >
-              See the Full Docket →
-            </Link>
-          </div>
+        {/* Bottom CTA */}
+        <div className="mt-28 md:mt-36 border-t border-gold/15 pt-12 flex justify-center lg:justify-end">
+          <Link
+            href="/events"
+            className="inline-flex items-center gap-3 bg-burgundy hover:bg-burgundy-deep text-parchment px-8 py-5 text-xs font-bold uppercase tracking-[1.8px] transition-colors"
+          >
+            See the Full Docket →
+          </Link>
         </div>
       </div>
     </section>

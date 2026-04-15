@@ -23,17 +23,9 @@ const WhyThisRace = () => {
         </div>
 
         <div className="grid grid-cols-12 gap-y-8 md:gap-12 items-start">
-          <h2 className="col-span-12 lg:col-span-6 font-display font-bold leading-[1.05] text-[clamp(40px,5.5vw,80px)]">
+          <h2 className="col-span-12 font-display font-bold leading-[1.05] text-[clamp(40px,5.5vw,80px)]">
             Why This Race <span className="italic text-gold font-medium">Matters.</span>
           </h2>
-
-          {/* Pull quote — spans 6 cols, offset */}
-          <blockquote className="col-span-12 lg:col-span-6 border-l-[3px] border-gold pl-8 py-2">
-            <p className="font-display italic text-2xl md:text-3xl leading-[1.35] text-parchment">
-              <span className="text-gold">A judge's duty is not to the moment</span> — but to
-              the Constitution that outlasts it.
-            </p>
-          </blockquote>
         </div>
 
         {/* Points grid — 4/4/4 */}
@@ -55,9 +47,9 @@ const WhyThisRace = () => {
 
         {/* Closing statement */}
         <div className="mt-20 border-t border-gold/15 pt-10 max-w-3xl">
-          <p className="font-display italic text-xl md:text-2xl text-parchment/85 leading-snug">
-            This race is about trust, stability, and confidence in Idaho's courts —
-            <span className="text-gold"> not politics.</span>
+          <p className="text-base md:text-lg leading-[1.85] text-parchment/85">
+            This race is about trust, stability, and confidence in Idaho's courts — not
+            politics.
           </p>
         </div>
       </div>

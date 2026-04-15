@@ -77,12 +77,14 @@ const MeetDavid = () => {
             ))}
           </div>
 
-          {/* Closing credential card */}
-          <div className="col-span-12 lg:col-span-6 lg:col-start-4 mt-6 border-l-2 border-gold pl-8 py-4">
-            <p className="font-display italic text-xl md:text-2xl text-navy leading-relaxed">
-              "David is an active member of the Idaho State Bar and has served on the
-              Professional Conduct Board since 2019 — committed to respectful treatment of
-              every person who appears in court."
+          {/* Closing credential paragraph */}
+          <div className="col-span-12 lg:col-span-8 lg:col-start-3 mt-4">
+            <p className="text-base md:text-lg leading-[1.8] text-ink-soft max-w-[65ch]">
+              David is an active member of the Idaho State Bar and has served on the
+              Professional Conduct Board since 2019. He has participated in professionalism
+              and ethics initiatives that promote civility and high standards of practice. He
+              is committed to respectful treatment of every Bar member and every person who
+              appears in court.
             </p>
           </div>
         </div>
