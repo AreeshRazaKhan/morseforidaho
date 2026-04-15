@@ -90,7 +90,7 @@ const SiteFooter = () => {
               Privacy Policy
             </Link>
             <span aria-hidden="true" className="text-parchment/20">·</span>
-            <Link href="/terms-of-service" className="block py-3 hover:text-gold transition-colors">
+            <Link href="/terms-and-conditions" className="block py-3 hover:text-gold transition-colors">
               Terms of Service
             </Link>
           </nav>

@@ -260,7 +260,7 @@ const AskMorseForm = () => {
         <div className="pt-4 border-t border-gold/15 flex flex-col md:flex-row md:items-center justify-between gap-6">
           <p className="text-[12px] text-parchment/50 leading-relaxed max-w-sm">
             By submitting you agree to the{' '}
-            <Link href="/terms-of-service" className="text-gold hover:underline">Terms of Service</Link>{' '}
+            <Link href="/terms-and-conditions" className="text-gold hover:underline">Terms of Service</Link>{' '}
             and{' '}
             <Link href="/privacy-policy" className="text-gold hover:underline">Privacy Policy</Link>.
           </p>

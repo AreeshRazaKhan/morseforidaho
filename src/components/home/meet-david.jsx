@@ -1,7 +1,6 @@
 import Image from 'next/image'
 
 const BIO_PARAGRAPHS = [
-  "Before joining the U.S. Attorney's Office, David served as a Deputy Attorney General in Idaho's Special Prosecutions Unit. There he prosecuted public corruption, insurance fraud, and violent crime, holding both government officials and private citizens equally accountable under the law.",
   'David has handled complex felony cases across trial and appellate courts, including arguing a Fifth Amendment issue before the Ninth Circuit Court of Appeals. This depth of courtroom experience has given him firsthand knowledge of the constitutional principles a judge must apply every day.',
   'He earned his law degree from the University of Idaho and has been licensed to practice law in Idaho since 2016. David also served in the U.S. Marine Corps as an Intelligence Specialist, Imagery Analyst, and Arabic Linguist — service that instilled the discipline and integrity he brings to every case.',
 ]
@@ -32,11 +31,17 @@ const MeetDavid = () => {
         {/* Asymmetric 12-col bento */}
         <div className="mt-20 grid grid-cols-12 gap-y-6 md:gap-8">
           {/* Drop-cap opening paragraph — spans 7 */}
-          <article className="col-span-12 lg:col-span-7 bg-white border border-parchment-3 rounded-2xl p-10 md:p-14">
+          <article className="col-span-12 lg:col-span-7 bg-white border border-parchment-3 rounded-2xl p-10 md:p-14 space-y-6">
             <p className="font-body text-lg leading-[1.75] text-ink-soft first-letter:font-display first-letter:font-bold first-letter:italic first-letter:text-[88px] first-letter:leading-[0.82] first-letter:float-left first-letter:pr-3 first-letter:pt-2 first-letter:text-burgundy">
               David Morse is an Assistant United States Attorney in the District of Idaho.
               Every day, he prosecutes serious federal crimes — drug trafficking, firearms
               offenses, fraud, and identity theft — to keep Idaho families safe.
+            </p>
+            <p className="font-body text-base md:text-lg leading-[1.8] text-ink-soft">
+              Before joining the U.S. Attorney's Office, David served as a Deputy Attorney
+              General in Idaho's Special Prosecutions Unit. There he prosecuted public
+              corruption, insurance fraud, and violent crime, holding both government
+              officials and private citizens equally accountable under the law.
             </p>
           </article>
 
@@ -57,9 +62,6 @@ const MeetDavid = () => {
             <div className="absolute inset-4 border border-gold/40 pointer-events-none z-10" />
             <div className="absolute inset-[22px] border border-gold/20 pointer-events-none z-10" />
             <div className="relative z-10">
-              <div className="text-[12px] tracking-[2.5px] uppercase text-gold font-bold mb-4">
-                Portrait · Candidate
-              </div>
               <div className="font-display font-bold text-parchment text-3xl md:text-4xl leading-tight">
                 Experienced.
                 <br />

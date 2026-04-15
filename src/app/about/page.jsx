@@ -171,9 +171,6 @@ const AboutPage = () => {
               <div className="absolute inset-4 border border-gold/40 pointer-events-none z-10" />
               <div className="absolute inset-[22px] border border-gold/20 pointer-events-none z-10" />
               <div className="absolute left-10 right-10 bottom-10 z-10">
-                <div className="text-[12px] tracking-[2.5px] uppercase text-gold font-bold mb-3">
-                  Portrait · The Candidate
-                </div>
                 <div className="font-display font-bold text-parchment text-3xl md:text-4xl leading-tight">
                   Experienced. Ethical.{' '}
                   <span className="italic text-gold font-medium">Fair.</span>
