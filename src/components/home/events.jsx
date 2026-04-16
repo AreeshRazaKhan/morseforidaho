@@ -124,7 +124,7 @@ const Events = async () => {
                       <article className="group relative bg-navy-deep border border-gold/20 rounded-xl p-7 min-h-[280px] flex flex-col justify-between hover:border-gold hover:bg-navy-deep/80 transition-colors">
                         <Link
                           href={`/events/${ev.id}`}
-                          className="absolute inset-0"
+                          className="absolute inset-0 z-[1]"
                           aria-label={`Open event details for ${ev.title}`}
                         />
 
@@ -179,14 +179,6 @@ const Events = async () => {
                             </div>
                           )}
                         </div>
-
-                        {/* Hover "Details" indicator */}
-                        <span
-                          aria-hidden="true"
-                          className="pointer-events-none absolute bottom-6 right-6 opacity-0 group-hover:opacity-100 text-gold text-sm font-bold uppercase tracking-[1.5px] translate-y-2 group-hover:translate-y-0 transition-all"
-                        >
-                          Details →
-                        </span>
                       </article>
                     </li>
                   )
