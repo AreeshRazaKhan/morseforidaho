@@ -65,7 +65,7 @@ const AskMorsePage = () => {
                   {
                     num: 'II',
                     title: 'Selected answers published',
-                    body: 'With your name initialized unless you tell us otherwise.',
+                    body: 'With your name initialed unless you tell us otherwise.',
                   },
                   {
                     num: 'III',

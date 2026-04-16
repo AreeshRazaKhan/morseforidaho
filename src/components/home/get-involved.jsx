@@ -1,4 +1,4 @@
-import SmsConsentText from '@/components/ui/sms-consent'
+import Link from 'next/link'
 
 const GetInvolved = () => {
   return (
@@ -44,75 +44,48 @@ const GetInvolved = () => {
           </div>
         </div>
 
-        {/* Form card — asymmetric right column */}
-        <form className="col-span-12 lg:col-span-6 bg-navy-deep border border-gold/20 rounded-2xl p-10 md:p-14 space-y-6 relative overflow-hidden">
+        {/* CTA card — asymmetric right column */}
+        <div className="col-span-12 lg:col-span-6 bg-navy-deep border border-gold/20 rounded-2xl p-10 md:p-14 flex flex-col justify-between relative overflow-hidden min-h-[400px]">
           <div
             aria-hidden="true"
             className="absolute inset-4 border border-gold/15 pointer-events-none rounded-xl"
           />
           <div className="relative">
             <span className="text-[12px] tracking-[2.5px] uppercase text-gold font-bold">
-              I · Get Campaign Updates
+              I · Get Involved
             </span>
             <h3 className="mt-4 font-display font-bold text-3xl md:text-4xl text-parchment leading-tight">
               Join the <span className="italic text-gold font-medium">Campaign.</span>
             </h3>
-            <p className="mt-4 text-parchment/60 text-sm max-w-md">
-              Be the first to know about events, endorsements, and election reminders.
+            <p className="mt-6 text-parchment/70 text-base leading-[1.75] max-w-md">
+              Stand with David Morse. Volunteer your time, attend an event, or
+              help spread the word across the Fourth District. Every voice matters.
             </p>
           </div>
 
-          <div className="relative space-y-4">
-            <label className="block">
-              <span className="text-[12px] tracking-[2px] uppercase text-gold-muted font-bold">
-                Full Name
-              </span>
-              <input
-                type="text"
-                name="name"
-                className="mt-2 w-full bg-navy-ink/50 border border-gold/20 text-parchment px-5 py-4 font-body focus:outline-none focus:border-gold transition-colors"
-                placeholder="David Morse"
-              />
-            </label>
-            <label className="block">
-              <span className="text-[12px] tracking-[2px] uppercase text-gold-muted font-bold">
-                Email
-              </span>
-              <input
-                type="email"
-                name="email"
-                className="mt-2 w-full bg-navy-ink/50 border border-gold/20 text-parchment px-5 py-4 font-body focus:outline-none focus:border-gold transition-colors"
-                placeholder="you@email.com"
-              />
-            </label>
-            <label className="block">
-              <span className="text-[12px] tracking-[2px] uppercase text-gold-muted font-bold">
-                Phone · Optional
-              </span>
-              <input
-                type="tel"
-                name="phone"
-                className="mt-2 w-full bg-navy-ink/50 border border-gold/20 text-parchment px-5 py-4 font-body focus:outline-none focus:border-gold transition-colors"
-                placeholder="(208) 555-0199"
-              />
-            </label>
+          <div className="relative mt-10 space-y-4">
+            <Link
+              href="/volunteer"
+              className="block w-full bg-burgundy hover:bg-burgundy-light text-parchment text-center px-7 py-5 text-xs font-bold uppercase tracking-[1.8px] transition-colors"
+            >
+              Volunteer Now →
+            </Link>
+            <div className="flex gap-4">
+              <Link
+                href="/events"
+                className="flex-1 text-center border border-gold/20 hover:bg-gold/10 text-parchment px-7 py-4 text-xs font-bold uppercase tracking-[1.8px] transition-colors"
+              >
+                Upcoming Events
+              </Link>
+              <Link
+                href="/contact"
+                className="flex-1 text-center border border-gold/20 hover:bg-gold/10 text-parchment px-7 py-4 text-xs font-bold uppercase tracking-[1.8px] transition-colors"
+              >
+                Contact Us
+              </Link>
+            </div>
           </div>
-
-          <button
-            type="submit"
-            className="relative w-full bg-burgundy hover:bg-burgundy-light text-parchment px-7 py-5 text-xs font-bold uppercase tracking-[1.8px] transition-colors cursor-pointer"
-          >
-            Defend Our Values →
-          </button>
-          <label className="relative flex items-start gap-3 text-parchment/60 text-[12px] leading-relaxed cursor-pointer">
-            <input
-              type="checkbox"
-              name="sms_updates"
-              className="mt-0.5 shrink-0 accent-gold"
-            />
-            <span><SmsConsentText /></span>
-          </label>
-        </form>
+        </div>
       </div>
     </section>
   )

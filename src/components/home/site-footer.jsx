@@ -84,7 +84,10 @@ const SiteFooter = () => {
       </div>
       <div className="border-t border-gold/10">
         <div className="mx-auto max-w-[1400px] px-6 md:px-12 lg:px-20 py-6 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 text-[12px] tracking-[1.5px] uppercase text-parchment/40">
-          <span>© 2026 Morse For Idaho. All rights reserved. Paid for by Morse For Idaho.</span>
+          <div className="flex flex-col gap-1">
+            <span>© 2026 Morse For Idaho. All rights reserved. Paid for by Morse For Idaho.</span>
+            <span className="text-parchment/30">Powered by Operation 1776</span>
+          </div>
           <nav className="flex items-center gap-4 sm:gap-6">
             <Link href="/privacy-policy" className="block py-3 hover:text-gold transition-colors">
               Privacy Policy

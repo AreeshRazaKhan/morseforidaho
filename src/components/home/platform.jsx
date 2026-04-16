@@ -72,7 +72,7 @@ const Platform = () => {
           {PILLARS.map((p) => (
             <article
               key={p.numeral}
-              className={`col-span-12 ${p.span} relative bg-navy-deep border border-gold/15 rounded-2xl p-10 md:p-14 ${p.tall ? 'min-h-[380px]' : 'min-h-[320px]'} flex flex-col justify-between overflow-hidden group hover:border-gold/40 transition-colors`}
+              className={`col-span-12 ${p.span} relative bg-navy-deep border border-gold/15 rounded-2xl p-10 md:p-14 ${p.tall ? 'min-h-[380px]' : 'min-h-[320px]'} flex flex-col overflow-hidden group hover:border-gold/40 transition-colors`}
             >
               <div
                 aria-hidden="true"

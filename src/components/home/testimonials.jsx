@@ -57,8 +57,8 @@ const Testimonials = () => {
               className={`col-span-12 ${q.span} bg-white border border-parchment-3 rounded-2xl p-10 md:p-12 flex flex-col justify-between min-h-[300px]`}
             >
               <blockquote className="border-l-[3px] border-gold pl-6 py-1">
-                <p className="font-display italic text-xl md:text-2xl text-navy leading-[1.4]">
-                  <span className="text-gold">{q.body.split(' ').slice(0, 4).join(' ')}</span>
+                <p className="font-display text-[1.25rem] md:text-[1.5rem] text-ink leading-[1.55] font-medium">
+                  <span className="italic text-burgundy">{q.body.split(' ').slice(0, 4).join(' ')}</span>
                   {' '}
                   {q.body.split(' ').slice(4).join(' ')}
                 </p>
@@ -66,7 +66,7 @@ const Testimonials = () => {
               <figcaption className="mt-8 pt-6 border-t border-parchment-3">
                 <div className="font-display font-bold text-navy text-base">{q.author}</div>
                 {q.role && (
-                  <div className="text-[12px] tracking-[2px] uppercase text-gold-muted font-bold mt-1">
+                  <div className="text-[13px] tracking-[2px] uppercase text-ink-soft font-bold mt-1">
                     {q.role}
                   </div>
                 )}
