@@ -11,9 +11,9 @@ const MeetDavid = () => {
       {/* Oversized numeral watermark */}
       <span
         aria-hidden="true"
-        className="pointer-events-none absolute -top-16 -left-8 font-display font-extrabold text-[260px] md:text-[400px] leading-none text-parchment-3 select-none"
+        className="pointer-events-none absolute -top-16 -left-8 font-display font-extrabold italic text-[260px] md:text-[400px] leading-none text-parchment-3 select-none"
       >
-        01
+        I
       </span>
 
       <div className="relative mx-auto max-w-[1400px] px-6 md:px-12 lg:px-20">

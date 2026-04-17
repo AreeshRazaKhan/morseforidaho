@@ -214,9 +214,9 @@ const AboutPage = () => {
             {/* Stat strip below portrait column */}
             <div className="col-span-12 lg:col-span-7 lg:col-start-6 grid grid-cols-3 gap-6 border-t border-parchment-3 pt-10 mt-6">
               {[
-                { n: '10+', l: 'Years Law' },
-                { n: '15+', l: 'Years Service' },
-                { n: '1000+', l: 'Court Cases' },
+                { n: '10+', l: 'Years Legal Experience' },
+                { n: '15+', l: 'Years of Public Service' },
+                { n: '1,000+', l: 'Court Appearances Across Idaho' },
               ].map((s) => (
                 <div key={s.l}>
                   <div className="font-display font-bold text-navy text-4xl md:text-5xl leading-none">
@@ -235,9 +235,9 @@ const AboutPage = () => {
         <section className="relative bg-navy-deep text-parchment overflow-hidden py-32 md:py-48">
           <span
             aria-hidden="true"
-            className="pointer-events-none absolute -left-10 top-10 font-display font-extrabold text-[260px] md:text-[420px] leading-none text-gold/[0.05] select-none"
+            className="pointer-events-none absolute -left-10 top-10 font-display font-extrabold italic text-[260px] md:text-[420px] leading-none text-gold/[0.05] select-none"
           >
-            03
+            III
           </span>
 
           <div className="relative mx-auto max-w-[1400px] px-6 md:px-12 lg:px-20">
@@ -311,9 +311,9 @@ const AboutPage = () => {
         <section className="relative bg-navy text-parchment overflow-hidden py-32 md:py-48">
           <span
             aria-hidden="true"
-            className="pointer-events-none absolute -bottom-16 -right-10 font-display font-extrabold text-[300px] md:text-[460px] leading-none text-gold/[0.05] select-none"
+            className="pointer-events-none absolute -bottom-16 -right-10 font-display font-extrabold italic text-[300px] md:text-[460px] leading-none text-gold/[0.05] select-none"
           >
-            04
+            IV
           </span>
 
           <div className="relative mx-auto max-w-[1400px] px-6 md:px-12 lg:px-20">

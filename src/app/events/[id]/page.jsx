@@ -134,9 +134,9 @@ const EventDetailPage = async ({ params }) => {
         <section className="relative bg-parchment overflow-hidden py-32 md:py-40">
           <span
             aria-hidden="true"
-            className="pointer-events-none absolute -top-20 -left-8 font-display font-extrabold text-[260px] md:text-[420px] leading-none text-parchment-3 select-none"
+            className="pointer-events-none absolute -top-20 -left-8 font-display font-extrabold italic text-[260px] md:text-[420px] leading-none text-parchment-3 select-none"
           >
-            01
+            I
           </span>
 
           <div className="relative mx-auto max-w-[1400px] px-6 md:px-12 lg:px-20 grid grid-cols-12 gap-y-8 md:gap-12">

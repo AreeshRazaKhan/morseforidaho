@@ -5,9 +5,9 @@ const GetInvolved = () => {
     <section id="get-involved" className="relative bg-navy text-parchment overflow-hidden py-32 md:py-48">
       <span
         aria-hidden="true"
-        className="pointer-events-none absolute -top-16 right-10 font-display font-extrabold text-[260px] md:text-[420px] leading-none text-gold/[0.05] select-none"
+        className="pointer-events-none absolute -top-16 right-10 font-display font-extrabold italic text-[260px] md:text-[420px] leading-none text-gold/[0.05] select-none"
       >
-        07
+        VII
       </span>
 
       <div className="relative mx-auto max-w-[1400px] px-6 md:px-12 lg:px-20 grid grid-cols-12 gap-y-8 md:gap-12">

@@ -58,9 +58,9 @@ const Platform = () => {
     <section id="platform" className="relative bg-navy text-parchment overflow-hidden py-32 md:py-48">
       <span
         aria-hidden="true"
-        className="pointer-events-none absolute -bottom-20 -right-10 font-display font-extrabold text-[300px] md:text-[440px] leading-none text-gold/[0.05] select-none"
+        className="pointer-events-none absolute -bottom-20 -right-10 font-display font-extrabold italic text-[300px] md:text-[440px] leading-none text-gold/[0.05] select-none"
       >
-        02
+        II
       </span>
 
       <div className="relative mx-auto max-w-[1400px] px-6 md:px-12 lg:px-20">

@@ -9,9 +9,9 @@ const WhyThisRace = () => {
     <section className="relative bg-navy-deep text-parchment overflow-hidden py-32 md:py-48">
       <span
         aria-hidden="true"
-        className="pointer-events-none absolute -left-10 top-10 font-display font-extrabold text-[240px] md:text-[360px] leading-none text-gold/[0.05] select-none"
+        className="pointer-events-none absolute -left-10 top-10 font-display font-extrabold italic text-[240px] md:text-[360px] leading-none text-gold/[0.05] select-none"
       >
-        03
+        III
       </span>
 
       <div className="relative mx-auto max-w-[1400px] px-6 md:px-12 lg:px-20">
