@@ -151,7 +151,7 @@ const PrivacyPolicyPage = () => {
                   </div>
                   <div className="mt-4 space-y-1 text-ink">
                     <div>PO Box 171101</div>
-                    <div>Boise, Idaho 83716</div>
+                    <div>Boise, Idaho 83717</div>
                     <div>
                       <a
                         href="tel:+15088016634"

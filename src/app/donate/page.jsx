@@ -404,7 +404,7 @@ const DonatePage = () => {
                   <div className="mt-5 text-ink text-lg md:text-xl leading-[1.7] font-display">
                     P.O. Box 171101
                     <br />
-                    Boise, Idaho 83716
+                    Boise, Idaho 83717
                   </div>
                   <div className="mt-8 h-px w-24 bg-gold" />
                   <p className="mt-5 text-ink-soft text-sm md:text-base leading-[1.7] max-w-md">

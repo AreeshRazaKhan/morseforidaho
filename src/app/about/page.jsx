@@ -106,7 +106,7 @@ const AboutPage = () => {
             <div className="flex items-center gap-4 mb-10">
               <span className="h-px w-10 bg-gold" />
               <span className="text-[12px] md:text-xs font-bold uppercase tracking-[4px] text-gold">
-                Volume I · The Candidate · About David
+                Volume I · About David
               </span>
             </div>
 
@@ -329,13 +329,11 @@ const AboutPage = () => {
               <span className="italic text-gold font-medium">Fair.</span>
             </h2>
 
-            <div className="mt-20 grid grid-cols-12 gap-y-6 md:gap-8">
-              {VALUES.map((v, i) => (
+            <div className="mt-20 grid grid-cols-12 gap-y-6 md:gap-8 items-stretch">
+              {VALUES.map((v) => (
                 <article
                   key={v.numeral}
-                  className={`col-span-12 ${
-                    i === 1 ? 'lg:col-span-4 lg:mt-16' : 'lg:col-span-4'
-                  } relative bg-navy-deep border border-gold/20 rounded-2xl p-10 md:p-12 min-h-[320px] flex flex-col justify-between overflow-hidden group hover:border-gold/50 transition-colors`}
+                  className="col-span-12 lg:col-span-4 relative bg-navy-deep border border-gold/20 rounded-2xl p-10 md:p-12 min-h-[400px] h-full flex flex-col justify-between overflow-hidden group hover:border-gold/50 transition-colors"
                 >
                   <span
                     aria-hidden="true"

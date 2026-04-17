@@ -97,35 +97,31 @@ const VolunteerPage = () => {
               </p>
             </div>
 
-            <div className="grid grid-cols-12 gap-y-6 md:gap-8">
-              {ROLES.map((r, i) => {
-                const span =
-                  i === 0 ? 'lg:col-span-7' : i === 1 ? 'lg:col-span-5' : i === 4 ? 'lg:col-span-5' : i === 5 ? 'lg:col-span-7' : 'lg:col-span-4'
-                return (
-                  <article
-                    key={r.numeral}
-                    className={`col-span-12 md:col-span-6 ${span} relative bg-white border border-parchment-3 rounded-2xl p-10 md:p-12 min-h-[280px] flex flex-col justify-between overflow-hidden group hover:border-gold/60 hover:-translate-y-1 transition-all`}
+            <div className="grid grid-cols-12 gap-y-6 md:gap-8 items-stretch">
+              {ROLES.map((r) => (
+                <article
+                  key={r.numeral}
+                  className="col-span-12 md:col-span-6 lg:col-span-4 relative bg-white border border-parchment-3 rounded-2xl p-10 md:p-12 min-h-[320px] h-full flex flex-col justify-between overflow-hidden group hover:border-gold/40 hover:-translate-y-[3px] transition-all"
+                >
+                  <span
+                    aria-hidden="true"
+                    className="absolute -top-4 -right-2 font-display font-extrabold italic text-gold/15 text-[150px] leading-none group-hover:text-gold/25 transition-colors"
                   >
-                    <span
-                      aria-hidden="true"
-                      className="absolute -top-2 -right-2 font-display font-extrabold italic text-parchment-3 text-[150px] leading-none group-hover:text-gold/20 transition-colors"
-                    >
-                      {r.numeral}
+                    {r.numeral}
+                  </span>
+                  <div className="relative">
+                    <span className="text-[12px] tracking-[2.5px] uppercase text-gold-muted font-bold">
+                      {r.numeral} · {r.tag}
                     </span>
-                    <div className="relative">
-                      <span className="text-[12px] tracking-[2.5px] uppercase text-gold-muted font-bold">
-                        {r.numeral} · {r.tag}
-                      </span>
-                      <h3 className="mt-4 font-display font-bold text-navy text-3xl leading-tight max-w-xs">
-                        {r.title}
-                      </h3>
-                    </div>
-                    <p className="relative mt-8 text-ink-soft text-[15px] leading-[1.75] max-w-[46ch]">
-                      {r.body}
-                    </p>
-                  </article>
-                )
-              })}
+                    <h3 className="mt-4 font-display font-bold text-navy text-3xl leading-tight max-w-xs">
+                      {r.title}
+                    </h3>
+                  </div>
+                  <p className="relative mt-8 text-ink-soft text-[15px] leading-[1.75] max-w-[46ch]">
+                    {r.body}
+                  </p>
+                </article>
+              ))}
             </div>
           </div>
         </section>

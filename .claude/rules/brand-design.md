@@ -275,3 +275,4 @@ When adding a new section or page, verify:
 - [ ] Max two signature patterns on the page.
 - [ ] Section passes AA contrast on every text/background combination.
 - [ ] Uses shadcn/ui primitives restyled with tokens, not custom markup.
+- [ ] Global footer renders the "Powered by Operation 1776" attribution line, legibly visible (not `/30` or lower opacity) — required on every page.

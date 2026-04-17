@@ -76,7 +76,7 @@ const SiteFooter = () => {
               <div className="text-parchment leading-relaxed">
                 Morse For Idaho<br />
                 P.O. Box 171101<br />
-                Boise, ID 83716
+                Boise, ID 83717
               </div>
             </li>
           </ul>
@@ -86,7 +86,17 @@ const SiteFooter = () => {
         <div className="mx-auto max-w-[1400px] px-6 md:px-12 lg:px-20 py-6 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 text-[12px] tracking-[1.5px] uppercase text-parchment/40">
           <div className="flex flex-col gap-1">
             <span>© 2026 Morse For Idaho. All rights reserved. Paid for by Morse For Idaho.</span>
-            <span className="text-parchment/30">Powered by Operation 1776</span>
+            <span className="text-parchment/60">
+              Powered by{' '}
+              <a
+                href="https://op1776.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gold hover:text-gold-muted underline-offset-4 hover:underline transition-colors"
+              >
+                Operation 1776
+              </a>
+            </span>
           </div>
           <nav className="flex items-center gap-4 sm:gap-6">
             <Link href="/privacy-policy" className="block py-3 hover:text-gold transition-colors">

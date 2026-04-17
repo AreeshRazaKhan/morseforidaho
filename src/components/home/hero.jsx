@@ -57,7 +57,7 @@ const Hero = () => {
         <div className="flex items-center gap-4 mb-10">
           <span className="h-px w-10 bg-gold" />
           <span className="text-[12px] md:text-xs font-bold uppercase tracking-[4px] text-gold">
-            Official Candidate · Idaho 2026
+            Fourth District Judge · Idaho 2026
           </span>
         </div>
 

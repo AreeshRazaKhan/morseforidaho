@@ -22,6 +22,8 @@ const Events = async () => {
   })
   const stops = upcoming.slice(0, 5)
 
+  if (stops.length === 0) return null
+
   return (
     <section id="events" className="relative bg-navy text-parchment overflow-hidden py-32 md:py-48">
       <span
@@ -58,27 +60,8 @@ const Events = async () => {
           </div>
         </div>
 
-        {/* Empty state */}
-        {stops.length === 0 ? (
-          <div className="bg-navy-deep border-l-[3px] border-gold p-10 max-w-2xl">
-            <div className="text-[12px] tracking-[2.5px] uppercase text-gold font-bold">
-              No upcoming stops
-            </div>
-            <p className="mt-4 text-parchment/85 text-base leading-[1.75]">
-              No upcoming stops are on the calendar right now. Check back soon — new stops
-              are added as the campaign travels the Fourth District.
-            </p>
-            <Link
-              href="/events"
-              className="mt-8 inline-flex items-center gap-2 py-3 text-gold font-bold uppercase text-[12px] tracking-[1.5px] hover:gap-3 transition-all"
-            >
-              Full Docket →
-            </Link>
-          </div>
-        ) : (
-          <>
-            {/* Horizontal timeline rail */}
-            <div className="relative">
+        {/* Horizontal timeline rail */}
+        <div className="relative">
               {/* Gold hairline running through the middle */}
               <div
                 aria-hidden="true"
@@ -183,10 +166,8 @@ const Events = async () => {
                     </li>
                   )
                 })}
-              </ol>
-            </div>
-          </>
-        )}
+          </ol>
+        </div>
 
         {/* Bottom CTA */}
         <div className="mt-28 md:mt-36 border-t border-gold/15 pt-12 flex justify-center lg:justify-end">
