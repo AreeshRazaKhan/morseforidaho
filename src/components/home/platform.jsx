@@ -27,11 +27,26 @@ const PILLARS = [
     title: 'Proven Track Record',
     body: "David has successfully prosecuted some of Idaho's most serious cases — protecting families, upholding the Constitution, and building the courtroom experience a district judge must bring to the bench every day.",
     cases: [
-      'Meth Trafficker Sentenced to 22 Years',
-      'Drug Trafficker Sentenced to 16 Years',
-      "Fentanyl Dealer Pleads Guilty After Co-Worker's Death",
-      'Wire Fraud & Identity Theft — 5+ Year Sentence',
-      'Corrupt Sheriff Sentenced for Misusing Funds',
+      {
+        title: 'Meth Trafficker Sentenced to 22 Years',
+        href: 'https://www.justice.gov/usao-id/pr/meth-trafficker-sentenced-nearly-22-years-federal-prison',
+      },
+      {
+        title: 'Drug Trafficker Sentenced to 16 Years',
+        href: 'https://www.justice.gov/usao-id/pr/methamphetamine-trafficker-sentenced-nearly-16-years-federal-prison',
+      },
+      {
+        title: "Fentanyl Dealer Pleads Guilty After Co-Worker's Death",
+        href: 'https://www.dea.gov/press-releases/2024/03/07/idaho-man-pleads-guilty-selling-his-co-worker-fentanyl-pills-resulted-co',
+      },
+      {
+        title: 'Wire Fraud & Identity Theft — 5+ Year Sentence',
+        href: 'https://www.justice.gov/usao-id/pr/rexburg-man-convicted-wire-fraud-and-aggravated-identity-theft-sentenced-more-5-years',
+      },
+      {
+        title: 'Corrupt Sheriff Sentenced for Misusing Funds',
+        href: 'https://idahonews.com/news/local/ag-southern-idaho-sheriff-sentenced-for-misusing-money',
+      },
     ],
     span: 'lg:col-span-7',
     tall: true,
@@ -96,11 +111,18 @@ const Platform = () => {
                   <ul className="mt-8 space-y-3 border-l border-gold/30 pl-6">
                     {p.cases.map((c) => (
                       <li
-                        key={c}
+                        key={c.title}
                         className="text-[13px] tracking-[0.5px] text-parchment/80 font-semibold leading-snug"
                       >
                         <span className="text-gold mr-2">·</span>
-                        {c}
+                        <a
+                          href={c.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="hover:text-gold transition-colors underline-offset-4 hover:underline"
+                        >
+                          {c.title}
+                        </a>
                       </li>
                     ))}
                   </ul>
