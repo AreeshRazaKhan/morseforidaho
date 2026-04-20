@@ -27,8 +27,16 @@ const EventDetailPage = async ({ params }) => {
   if (!event) notFound()
 
   const allEvents = await fetchGHLEvents()
-  const currentIndex = allEvents.findIndex((e) => e.id === id)
-  const related = [allEvents[currentIndex - 1], allEvents[currentIndex + 1]].filter(Boolean)
+  const startOfToday = new Date()
+  startOfToday.setHours(0, 0, 0, 0)
+  const related = allEvents
+    .filter((e) => {
+      if (e.id === id) return false
+      const raw = e.endDate?.raw || e.date?.raw
+      if (!raw) return false
+      return new Date(`${raw}T00:00:00`) >= startOfToday
+    })
+    .slice(0, 2)
 
   return (
     <>
