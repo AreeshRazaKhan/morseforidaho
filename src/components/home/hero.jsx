@@ -4,10 +4,10 @@ import Link from 'next/link'
 const Hero = () => {
   return (
     <section className="relative bg-navy text-parchment overflow-hidden pt-[72px]">
-      {/* Ambient background — Hillsboro Civic Center, deeply recessed */}
+      {/* Ambient background — American flag, deeply recessed */}
       <div className="absolute inset-0 opacity-25 mix-blend-luminosity" aria-hidden="true">
         <Image
-          src="/hillsboro-civic-center.jpg"
+          src="/american-flag.jpg"
           alt=""
           fill
           priority
