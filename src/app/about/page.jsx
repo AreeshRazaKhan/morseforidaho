@@ -214,7 +214,7 @@ const AboutPage = () => {
             {/* Stat strip below portrait column */}
             <div className="col-span-12 lg:col-span-7 lg:col-start-6 grid grid-cols-3 gap-6 border-t border-parchment-3 pt-10 mt-6">
               {[
-                { n: '10+', l: 'Years Legal Experience' },
+                { n: '10+', l: 'Years of Legal Experience' },
                 { n: '15+', l: 'Years of Public Service' },
                 { n: '1,000+', l: 'Court Appearances Across Idaho' },
               ].map((s) => (
