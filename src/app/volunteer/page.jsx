@@ -6,7 +6,7 @@ import VolunteerForm from '@/components/volunteer/volunteer-form'
 export const metadata = {
   title: 'Volunteer — Morse For Idaho',
   description:
-    'Join the Final Push. Door knock, phone bank, host a yard sign, or crew an event for the Morse For Idaho campaign.',
+    'Join the Final Push. Door knock, phone bank, or crew an event for the Morse For Idaho campaign.',
 }
 
 const ROLES = [
@@ -24,24 +24,18 @@ const ROLES = [
   },
   {
     numeral: 'III',
-    tag: 'On Your Lawn',
-    title: 'Host a Yard Sign',
-    body: 'Show your neighbors. A yard sign is the simplest and most effective form of advocacy in a judicial race.',
-  },
-  {
-    numeral: 'IV',
     tag: 'At the Venue',
     title: 'Event Crew',
     body: 'Set up chairs, welcome guests, hand out literature, and break down at the end of every stop on the docket.',
   },
   {
-    numeral: 'V',
+    numeral: 'IV',
     tag: 'Behind the Scenes',
     title: 'Data & Research',
     body: 'Help the campaign with voter file work, research projects, and list management. Ideal for a few focused hours from home.',
   },
   {
-    numeral: 'VI',
+    numeral: 'V',
     tag: 'At the Party',
     title: 'Host an Event',
     body: 'Open your home or business for a coffee, a meet & greet, or a kitchen-table conversation. We handle logistics.',
@@ -59,7 +53,7 @@ const VolunteerPage = () => {
           volume="Volume IV · The Volunteers"
           title="Volunteer."
           titleAccent="Six weeks, one district."
-          dek="The Final Push begins now. Every door knocked, every neighbor called, every yard sign planted is a vote of confidence in a courtroom that works. Pick a role — the campaign will meet you halfway."
+          dek="The Final Push begins now. Every door knocked and every neighbor called is a vote of confidence in a courtroom that works. Pick a role — the campaign will meet you halfway."
           backgroundImage="https://images.unsplash.com/photo-1596797038530-2c107229654b?q=80&w=1800&auto=format&fit=crop"
           watermark="IV"
           meta={[

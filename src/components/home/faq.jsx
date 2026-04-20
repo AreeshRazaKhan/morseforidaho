@@ -21,11 +21,11 @@ const FAQ_ITEMS = [
   },
   {
     q: 'How can I volunteer?',
-    a: "Fill out the 'Get Involved' form on this page. You can volunteer for door knocking, host a yard sign, help at events, or simply spread the word to friends and family.",
+    a: "Fill out the 'Get Involved' form on this page. You can volunteer for door knocking, phone banking, help at events, or simply spread the word to friends and family.",
   },
   {
     q: 'How are donations used?',
-    a: "All contributions go directly toward campaign operations. Yard signs, community events, voter outreach, and getting David's message to every corner of the Fourth District. Every dollar counts.",
+    a: "All contributions go directly toward campaign operations. Road signs, community events, voter outreach, and getting David's message to every corner of the Fourth District. Every dollar counts.",
   },
   {
     q: 'How is my personal information protected?',

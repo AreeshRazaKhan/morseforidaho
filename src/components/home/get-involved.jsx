@@ -32,7 +32,7 @@ const GetInvolved = () => {
               <span className="text-[12px] tracking-[2px] uppercase text-gold-muted font-bold">
                 Phone
               </span>
-              <div className="mt-2 font-display text-xl text-parchment">(508) 801-6634</div>
+              <div className="mt-2 font-display text-xl text-parchment">(208) 615-5086</div>
             </div>
             <div>
               <span className="text-[12px] tracking-[2px] uppercase text-gold-muted font-bold">

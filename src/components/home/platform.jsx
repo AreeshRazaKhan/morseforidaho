@@ -77,7 +77,7 @@ const Platform = () => {
             </h2>
           </div>
           <p className="col-span-12 lg:col-span-4 text-parchment/70 text-base md:text-lg leading-relaxed max-w-md">
-            Four principles — earned in the courtroom, built on the Constitution, and carried
+            Four principles — earned in the courtroom, built on the rule of law, and carried
             into every ruling the bench will demand.
           </p>
         </div>

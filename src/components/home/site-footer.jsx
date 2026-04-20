@@ -52,10 +52,10 @@ const SiteFooter = () => {
                 Phone
               </div>
               <a
-                href="tel:+15088016634"
+                href="tel:+12086155086"
                 className="inline-block py-2 font-display text-parchment text-lg hover:text-gold transition-colors"
               >
-                (508) 801-6634
+                (208) 615-5086
               </a>
             </li>
             <li>

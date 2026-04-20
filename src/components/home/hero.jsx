@@ -104,19 +104,19 @@ const Hero = () => {
               <div>
                 <div className="font-display text-2xl text-gold font-bold">10+</div>
                 <div className="mt-1 text-[12px] tracking-[1.5px] uppercase text-parchment/50">
-                  Years Law
+                  Years of Legal Experience
                 </div>
               </div>
               <div>
                 <div className="font-display text-2xl text-gold font-bold">15+</div>
                 <div className="mt-1 text-[12px] tracking-[1.5px] uppercase text-parchment/50">
-                  Years Service
+                  Years of Public Service
                 </div>
               </div>
               <div>
                 <div className="font-display text-2xl text-gold font-bold">1000+</div>
                 <div className="mt-1 text-[12px] tracking-[1.5px] uppercase text-parchment/50">
-                  Court Cases
+                  Courtroom Appearances
                 </div>
               </div>
             </div>

@@ -154,10 +154,10 @@ const PrivacyPolicyPage = () => {
                     <div>Boise, Idaho 83717</div>
                     <div>
                       <a
-                        href="tel:+15088016634"
+                        href="tel:+12086155086"
                         className="inline-block py-2 text-burgundy hover:text-burgundy-deep underline-offset-4 hover:underline"
                       >
-                        (508) 801-6634
+                        (208) 615-5086
                       </a>
                     </div>
                     <div>

@@ -37,7 +37,7 @@ const CAREER_CHAPTERS = [
     year: 'Present',
     role: 'Assistant United States Attorney',
     subtitle: 'District of Idaho',
-    body: "Today, David prosecutes serious federal crimes — drug trafficking, firearms offenses, fraud, and identity theft — to keep Idaho families safe. He has argued a Fifth Amendment issue before the Ninth Circuit Court of Appeals.",
+    body: "Today, David prosecutes serious federal crimes — drug trafficking, firearms offenses, fraud, and identity theft — to keep Idaho families safe. He has argued a nuanced legal issue before the Ninth Circuit Court of Appeals.",
   },
   {
     numeral: 'V',
@@ -205,9 +205,9 @@ const AboutPage = () => {
 
               <p className="mt-6 text-base md:text-lg text-ink-soft leading-[1.85] max-w-[65ch]">
                 David has handled complex felony cases across trial and appellate courts,
-                including arguing a Fifth Amendment issue before the Ninth Circuit Court of
+                including arguing a nuanced legal issue before the Ninth Circuit Court of
                 Appeals. This depth of courtroom experience has given him firsthand knowledge
-                of the constitutional principles a judge must apply every day.
+                of the constitutional and legal principles a judge must apply every day.
               </p>
             </article>
 

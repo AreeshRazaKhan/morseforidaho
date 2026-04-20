@@ -41,7 +41,7 @@ const Testimonials = () => {
             <div className="flex items-center gap-4 mb-6">
               <span className="h-px w-10 bg-burgundy" />
               <span className="text-xs font-bold uppercase tracking-[3px] text-burgundy">
-                Chapter · V · The Endorsements
+                Chapter · V · Community Support
               </span>
             </div>
             <h2 className="font-display font-bold text-navy leading-[1.05] text-[clamp(40px,5.5vw,80px)]">

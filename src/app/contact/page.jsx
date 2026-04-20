@@ -21,7 +21,7 @@ const REASONS = [
   {
     numeral: 'II',
     label: 'Volunteer',
-    body: 'Door knocking, yard signs, event staffing — every hour helps carry the district.',
+    body: 'Door knocking, phone banking, event staffing — every hour helps carry the district.',
     tag: 'Get Involved',
   },
   {
@@ -139,10 +139,10 @@ const ContactPage = () => {
                     I · By Phone
                   </div>
                   <a
-                    href="tel:+15088016634"
+                    href="tel:+12086155086"
                     className="mt-2 block font-display font-bold text-navy text-3xl md:text-4xl hover:text-burgundy transition-colors"
                   >
-                    (508) 801-6634
+                    (208) 615-5086
                   </a>
                   <div className="mt-2 text-[12px] tracking-[1.5px] uppercase text-ink-muted">
                     Mon–Fri · 9am–6pm MST

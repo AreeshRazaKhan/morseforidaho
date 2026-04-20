@@ -1,7 +1,7 @@
 import Image from 'next/image'
 
 const BIO_PARAGRAPHS = [
-  'David has handled complex felony cases across trial and appellate courts, including arguing a Fifth Amendment issue before the Ninth Circuit Court of Appeals. This depth of courtroom experience has given him firsthand knowledge of the constitutional principles a judge must apply every day.',
+  'David has handled complex felony cases across trial and appellate courts, including arguing a nuanced legal issue before the Ninth Circuit Court of Appeals. This depth of courtroom experience has given him firsthand knowledge of the constitutional and legal principles a judge must apply every day.',
   'He earned his law degree from the University of Idaho and has been licensed to practice law in Idaho since 2016. David also served in the U.S. Marine Corps as an Intelligence Specialist, Imagery Analyst, and Arabic Linguist — service that instilled the discipline and integrity he brings to every case.',
 ]
 
@@ -85,7 +85,7 @@ const MeetDavid = () => {
               David is an active member of the Idaho State Bar and has served on the
               Professional Conduct Board since 2019. He has participated in professionalism
               and ethics initiatives that promote civility and high standards of practice. He
-              is committed to respectful treatment of every Bar member and every person who
+              is committed to the respectful treatment of every Bar member and every person who
               appears in court.
             </p>
           </div>
