@@ -130,7 +130,7 @@ const RsvpForm = ({ event }) => {
               value={form.firstName}
               onChange={onChange}
               className={fieldClass('firstName')}
-              placeholder="Barbara"
+              placeholder="David"
               disabled={status === 'submitting'}
             />
             {errors.firstName && <span className="mt-1 block text-[12px] text-burgundy-light">{errors.firstName}</span>}
@@ -146,7 +146,7 @@ const RsvpForm = ({ event }) => {
               value={form.lastName}
               onChange={onChange}
               className={fieldClass('lastName')}
-              placeholder="Kahl"
+              placeholder="Morse"
               disabled={status === 'submitting'}
             />
             {errors.lastName && <span className="mt-1 block text-[12px] text-burgundy-light">{errors.lastName}</span>}
