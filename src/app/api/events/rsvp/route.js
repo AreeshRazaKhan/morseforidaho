@@ -1,4 +1,4 @@
-import { nowIso, yesNo, fetchGHLEvent } from '@/lib/ghl'
+import { nowIso, yesNo, fetchGHLEvent, postA2PWebhook } from '@/lib/ghl'
 
 // Full URL hardcoded — Morse account uses a location-scoped hook ID
 // (`BlWviZhz7Vyrg1cbGSYr`) rather than the template default.
@@ -42,11 +42,14 @@ export const POST = async (req) => {
       submitted_at: nowIso(),
     }
 
-    const resp = await fetch(WEBHOOK_URL, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(payload),
-    })
+    const [resp] = await Promise.all([
+      fetch(WEBHOOK_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      }),
+      postA2PWebhook(payload),
+    ])
     if (!resp.ok) {
       console.error('[api/events/rsvp] upstream status:', resp.status)
       return Response.json({ error: 'Upstream webhook failed' }, { status: 502 })
