@@ -7,6 +7,17 @@ import SmsConsentText from '@/components/ui/sms-consent'
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 
+// Mask user input as (XXX) XXX-XXXX while typing. Strips non-digits, caps at
+// 10 digits, and lays them into the US format so the payload sent to GHL is
+// always in the same shape regardless of what the user typed or pasted.
+const formatPhone = (raw) => {
+  const digits = (raw || '').replace(/\D/g, '').slice(0, 10)
+  if (digits.length === 0) return ''
+  if (digits.length <= 3) return `(${digits}`
+  if (digits.length <= 6) return `(${digits.slice(0, 3)}) ${digits.slice(3)}`
+  return `(${digits.slice(0, 3)}) ${digits.slice(3, 6)}-${digits.slice(6)}`
+}
+
 const ContactForm = () => {
   const [form, setForm] = useState({
     firstName: '',
@@ -23,10 +34,12 @@ const ContactForm = () => {
   const onChange = (e) => {
     const { name, value, type, checked } = e.target
     setForm((f) => {
-      const next = { ...f, [name]: type === 'checkbox' ? checked : value }
+      const rawValue = type === 'checkbox' ? checked : value
+      const nextValue = name === 'phone' ? formatPhone(rawValue) : rawValue
+      const next = { ...f, [name]: nextValue }
       // Clearing the phone disables SMS consent — reset the box too so we
       // never send a stale opt-in if the user re-enters a different number.
-      if (name === 'phone' && !value.trim()) next.sms_updates = false
+      if (name === 'phone' && !nextValue) next.sms_updates = false
       return next
     })
     if (errors[name]) setErrors((prev) => ({ ...prev, [name]: null }))
