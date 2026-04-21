@@ -1,4 +1,4 @@
-import { nowIso, yesNo } from '@/lib/ghl'
+import { nowIso, postA2PWebhook, yesNo } from '@/lib/ghl'
 
 // Three parallel webhooks per rule §2. Each triggers a different GHL
 // workflow. All three use the Morse account's location-scoped hook ID
@@ -47,16 +47,20 @@ export const POST = async (req) => {
       submitted_at: nowIso(),
     }
 
-    const results = await Promise.all(
-      WEBHOOK_URLS.map((url) =>
+    const results = await Promise.all([
+      ...WEBHOOK_URLS.map((url) =>
         fetch(url, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(payload),
         }).catch((err) => ({ ok: false, err }))
-      )
-    )
-    const anySuccess = results.some((r) => r && r.ok)
+      ),
+      postA2PWebhook(payload),
+    ])
+    // Only consider the primary workflow webhooks for success — the A2P hook is
+    // a side channel and must not gate the form response.
+    const primaryResults = results.slice(0, WEBHOOK_URLS.length)
+    const anySuccess = primaryResults.some((r) => r && r.ok)
     if (!anySuccess) {
       console.error('[api/volunteer] all webhooks failed')
       return Response.json({ error: 'Upstream webhooks failed' }, { status: 502 })

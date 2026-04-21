@@ -35,6 +35,27 @@ export const nowIso = () => new Date().toISOString()
 
 export const yesNo = (val) => (val ? 'Yes' : 'No')
 
+// Fire the A2P SMS opt-in workflow webhook. Single shared endpoint for every
+// form that collects SMS consent (contact, volunteer, ask-morse). Resolves to
+// null (no-op) when the user did not consent — keeps non-consenting
+// submissions out of the SMS compliance flow entirely.
+const A2P_WEBHOOK_URL =
+  'https://services.leadconnectorhq.com/hooks/BlWviZhz7Vyrg1cbGSYr/webhook-trigger/c3eaa710-9d7c-4a9c-8b4f-838d105bd1ca'
+
+export const postA2PWebhook = (payload) => {
+  if (payload?.sms_updates !== 'Yes' && payload?.sms_promo !== 'Yes') {
+    return Promise.resolve(null)
+  }
+  return fetch(A2P_WEBHOOK_URL, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(payload),
+  }).catch((err) => {
+    console.error('[postA2PWebhook]:', err)
+    return null
+  })
+}
+
 // ══════════════════════════════════════════════════════════════
 // 2. REST HEADERS + CONTACT/APPOINTMENT HELPERS
 // ══════════════════════════════════════════════════════════════

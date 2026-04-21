@@ -1,4 +1,4 @@
-import { nowIso, yesNo } from '@/lib/ghl'
+import { nowIso, postA2PWebhook, yesNo } from '@/lib/ghl'
 
 // Per .claude/rules/ghl-forms-webhooks.md the Ask Morse form is the
 // Issue Report form renamed — payload type/source stay as Issue_Report.
@@ -40,11 +40,14 @@ export const POST = async (req) => {
       submitted_at: nowIso(),
     }
 
-    const resp = await fetch(WEBHOOK_URL, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(payload),
-    })
+    const [resp] = await Promise.all([
+      fetch(WEBHOOK_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      }),
+      postA2PWebhook(payload),
+    ])
     if (!resp.ok) {
       console.error('[api/ask-morse] upstream status:', resp.status)
       return Response.json({ error: 'Upstream webhook failed' }, { status: 502 })
