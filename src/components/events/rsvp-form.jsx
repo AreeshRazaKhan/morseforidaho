@@ -183,7 +183,8 @@ const RsvpForm = ({ event }) => {
         </label>
 
         <label className="block">
-          <span className="text-[12px] tracking-[2px] uppercase text-gold-muted font-bold">
+          <span className="flex items-center gap-2 text-[12px] tracking-[2px] uppercase text-gold-muted font-bold">
+            <span aria-hidden="true" className="size-1 rounded-full bg-gold" />
             Contact Number · Optional
           </span>
           <input

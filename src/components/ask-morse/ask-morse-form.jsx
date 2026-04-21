@@ -167,7 +167,8 @@ const AskMorseForm = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <label className="block">
-            <span className="text-[12px] tracking-[2px] uppercase text-gold-muted font-bold">
+            <span className="flex items-center gap-2 text-[12px] tracking-[2px] uppercase text-gold-muted font-bold">
+              <span aria-hidden="true" className="size-1 rounded-full bg-gold" />
               Phone · Optional
             </span>
             <input
@@ -181,7 +182,8 @@ const AskMorseForm = () => {
             />
           </label>
           <label className="block">
-            <span className="text-[12px] tracking-[2px] uppercase text-gold-muted font-bold">
+            <span className="flex items-center gap-2 text-[12px] tracking-[2px] uppercase text-gold-muted font-bold">
+              <span aria-hidden="true" className="size-1 rounded-full bg-gold" />
               Location · Optional
             </span>
             <input

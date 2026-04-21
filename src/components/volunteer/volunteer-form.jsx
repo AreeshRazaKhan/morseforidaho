@@ -214,7 +214,8 @@ const VolunteerForm = () => {
             {errors.email && <span className="mt-1 block text-[12px] text-burgundy-light">{errors.email}</span>}
           </label>
           <label className="block">
-            <span className="text-[12px] tracking-[2px] uppercase text-gold-muted font-bold">
+            <span className="flex items-center gap-2 text-[12px] tracking-[2px] uppercase text-gold-muted font-bold">
+              <span aria-hidden="true" className="size-1 rounded-full bg-gold" />
               Phone · Optional
             </span>
             <input type="tel" name="phone" value={form.phone} onChange={onChange}
@@ -224,12 +225,18 @@ const VolunteerForm = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <label className="block">
-            <span className="text-[12px] tracking-[2px] uppercase text-gold-muted font-bold">ZIP Code</span>
+            <span className="flex items-center gap-2 text-[12px] tracking-[2px] uppercase text-gold-muted font-bold">
+              <span aria-hidden="true" className="size-1 rounded-full bg-gold" />
+              ZIP Code
+            </span>
             <input type="text" name="zipCode" value={form.zipCode} onChange={onChange}
               className={fieldClass('zipCode')} placeholder="83702" disabled={status === 'submitting'} />
           </label>
           <label className="block">
-            <span className="text-[12px] tracking-[2px] uppercase text-gold-muted font-bold">County</span>
+            <span className="flex items-center gap-2 text-[12px] tracking-[2px] uppercase text-gold-muted font-bold">
+              <span aria-hidden="true" className="size-1 rounded-full bg-gold" />
+              County
+            </span>
             <select name="county" value={form.county} onChange={onChange}
               className={`${fieldClass('county')} appearance-none`} disabled={status === 'submitting'}>
               <option value="">Select a county…</option>
@@ -337,7 +344,8 @@ const VolunteerForm = () => {
         </label>
 
         <label className="block">
-          <span className="text-[12px] tracking-[2px] uppercase text-gold-muted font-bold">
+          <span className="flex items-center gap-2 text-[12px] tracking-[2px] uppercase text-gold-muted font-bold">
+            <span aria-hidden="true" className="size-1 rounded-full bg-gold opacity-0" />
             Anything Else to Share · Optional
           </span>
           <textarea name="anythingElse" value={form.anythingElse} onChange={onChange} rows={3}

@@ -173,7 +173,8 @@ const ContactForm = () => {
             {errors.email && <span className="mt-1 block text-[12px] text-burgundy-light">{errors.email}</span>}
           </label>
           <label className="block">
-            <span className="text-[12px] tracking-[2px] uppercase text-gold-muted font-bold">
+            <span className="flex items-center gap-2 text-[12px] tracking-[2px] uppercase text-gold-muted font-bold">
+              <span aria-hidden="true" className="size-1 rounded-full bg-gold" />
               Phone · Optional
             </span>
             <input
