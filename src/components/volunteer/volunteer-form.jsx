@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { useState } from 'react'
 
 import SmsConsentText from '@/components/ui/sms-consent'
+import { formatPhone } from '@/lib/format-phone'
 
 // Values below are locked to .claude/rules/ghl-forms-webhooks.md §2.
 // Do not edit the string values without updating the GHL workflow tags.
@@ -81,10 +82,12 @@ const VolunteerForm = () => {
   const onChange = (e) => {
     const { name, value, type, checked } = e.target
     setForm((f) => {
-      const next = { ...f, [name]: type === 'checkbox' ? checked : value }
+      const rawValue = type === 'checkbox' ? checked : value
+      const nextValue = name === 'phone' ? formatPhone(rawValue) : rawValue
+      const next = { ...f, [name]: nextValue }
       // Clearing the phone disables SMS consent — reset the box too so we
       // never send a stale opt-in if the user re-enters a different number.
-      if (name === 'phone' && !value.trim()) next.sms_updates = false
+      if (name === 'phone' && !nextValue) next.sms_updates = false
       return next
     })
     if (errors[name]) setErrors((prev) => ({ ...prev, [name]: null }))
@@ -215,7 +218,7 @@ const VolunteerForm = () => {
               Phone · Optional
             </span>
             <input type="tel" name="phone" value={form.phone} onChange={onChange}
-              className={fieldClass('phone')} placeholder="(208) 555-0199" disabled={status === 'submitting'} />
+              className={fieldClass('phone')} placeholder="+1 (208) 555-0199" disabled={status === 'submitting'} />
           </label>
         </div>
 

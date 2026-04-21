@@ -5,6 +5,7 @@ import PropTypes from 'prop-types'
 import { useState } from 'react'
 
 import SmsConsentText from '@/components/ui/sms-consent'
+import { formatPhone } from '@/lib/format-phone'
 
 // GHL rule §4 lists only First Name, Last Name, Email, Contact Number.
 // The A2P 10DLC SOP (Operation 1776) requires both SMS consent checkboxes
@@ -31,10 +32,12 @@ const RsvpForm = ({ event }) => {
   const onChange = (e) => {
     const { name, value, type, checked } = e.target
     setForm((f) => {
-      const next = { ...f, [name]: type === 'checkbox' ? checked : value }
+      const rawValue = type === 'checkbox' ? checked : value
+      const nextValue = name === 'phone' ? formatPhone(rawValue) : rawValue
+      const next = { ...f, [name]: nextValue }
       // Clearing the phone disables SMS consent — reset the box too so we
       // never send a stale opt-in if the user re-enters a different number.
-      if (name === 'phone' && !value.trim()) next.sms_updates = false
+      if (name === 'phone' && !nextValue) next.sms_updates = false
       return next
     })
     if (errors[name]) setErrors((prev) => ({ ...prev, [name]: null }))
@@ -189,7 +192,7 @@ const RsvpForm = ({ event }) => {
             value={form.phone}
             onChange={onChange}
             className={fieldClass('phone')}
-            placeholder="(503) 555-1234"
+            placeholder="+1 (503) 555-1234"
             disabled={status === 'submitting'}
           />
         </label>
