@@ -22,7 +22,13 @@ const ContactForm = () => {
 
   const onChange = (e) => {
     const { name, value, type, checked } = e.target
-    setForm((f) => ({ ...f, [name]: type === 'checkbox' ? checked : value }))
+    setForm((f) => {
+      const next = { ...f, [name]: type === 'checkbox' ? checked : value }
+      // Clearing the phone disables SMS consent — reset the box too so we
+      // never send a stale opt-in if the user re-enters a different number.
+      if (name === 'phone' && !value.trim()) next.sms_updates = false
+      return next
+    })
     if (errors[name]) setErrors((prev) => ({ ...prev, [name]: null }))
   }
 
@@ -33,6 +39,9 @@ const ContactForm = () => {
     if (!form.email.trim()) next.email = 'Required'
     else if (!EMAIL_RE.test(form.email.trim())) next.email = 'Invalid email'
     if (!form.message.trim()) next.message = 'Required'
+    if (form.phone.trim() && !form.sms_updates) {
+      next.sms_updates = 'SMS consent is required when a phone number is provided'
+    }
     setErrors(next)
     return Object.keys(next).length === 0
   }
@@ -195,18 +204,28 @@ const ContactForm = () => {
 
         <fieldset className="pt-2">
           <legend className="text-[12px] tracking-[2px] uppercase text-gold-muted font-bold mb-2">
-            SMS Consent · Optional
+            SMS Consent
           </legend>
-          <label className="flex items-start gap-3 text-parchment/60 text-[12px] leading-relaxed cursor-pointer">
+          <label
+            className={`flex items-start gap-3 text-[12px] leading-relaxed ${
+              form.phone.trim()
+                ? 'text-parchment/60 cursor-pointer'
+                : 'text-parchment/30 cursor-not-allowed'
+            }`}
+          >
             <input
               type="checkbox"
               name="sms_updates"
               checked={form.sms_updates}
               onChange={onChange}
-              className="mt-0.5 shrink-0 accent-gold"
+              disabled={!form.phone.trim() || status === 'submitting'}
+              className="mt-0.5 shrink-0 accent-gold disabled:cursor-not-allowed"
             />
             <span><SmsConsentText /></span>
           </label>
+          {errors.sms_updates && (
+            <span className="mt-1 block text-[12px] text-burgundy-light">{errors.sms_updates}</span>
+          )}
         </fieldset>
 
         <div className="pt-4 flex flex-col md:flex-row md:items-center gap-6 justify-between border-t border-gold/15">
