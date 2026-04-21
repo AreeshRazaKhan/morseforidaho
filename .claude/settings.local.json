@@ -82,7 +82,8 @@
       "Bash(py --version)",
       "Bash(py -m pip install Pillow -q)",
       "Bash(py *)",
-      "Bash(python -c \"import sys,json; data=json.load\\(sys.stdin\\); [print\\(f\\\\\"{e['title']}: time='{e.get\\('time',''\\)}' endTime='{e.get\\('endTime',''\\)}'\\\\\" \\) for e in data.get\\('events',[]\\)]\")"
+      "Bash(python -c \"import sys,json; data=json.load\\(sys.stdin\\); [print\\(f\\\\\"{e['title']}: time='{e.get\\('time',''\\)}' endTime='{e.get\\('endTime',''\\)}'\\\\\" \\) for e in data.get\\('events',[]\\)]\")",
+      "Bash(git revert *)"
     ]
   }
 }
