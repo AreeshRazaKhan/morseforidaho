@@ -183,7 +183,6 @@ is never sold to third parties. You can opt out of text or email communications 
 - **Email:** (obfuscated on source site)
 - **Disclaimer:** Paid for by Morse For Idaho
 - **Copyright:** © 2026 Morse for Idaho. All rights reserved.
-- **Powered by:** Operation 1776
 
 ## Site Routes (confirmed)
 
