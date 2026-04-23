@@ -65,8 +65,8 @@ const District = () => {
           {/* Community photograph tile */}
           <div className="relative rounded-2xl overflow-hidden min-h-[180px]">
             <Image
-              src="https://images.unsplash.com/photo-1596797038530-2c107229654b?q=80&w=900&auto=format&fit=crop"
-              alt="An Idaho community gathering in the Fourth Judicial District"
+              src="/american-flag.jpg"
+              alt="American flag representing the constitutional duties of the Fourth Judicial District"
               fill
               sizes="(min-width: 1024px) 20vw, 50vw"
               className="object-cover"
