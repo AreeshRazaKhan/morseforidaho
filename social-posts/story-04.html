@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>story-04 · Election Day</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500;1,600&family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#2C3858; --navy-deep:#1F2940; --navy-ink:#141B2C;
+    --burgundy:#681828; --burgundy-deep:#4A0F1B; --burgundy-light:#8B2A3E;
+    --gold:#D8B868; --gold-muted:#A08838; --gold-deep:#7A6828;
+    --parchment:#FAF8F2; --parchment-2:#F2ECDF; --parchment-3:#E7DFC9;
+    --ink:#383028; --ink-soft:#5A5247; --ink-muted:#8A8175;
+    --font-display:'EB Garamond',Georgia,serif;
+    --font-body:'Source Serif 4',Georgia,serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{min-height:100%;background:#141B2C;display:grid;place-items:center;overflow:auto}
+  body{width:608px;height:1080px;overflow:hidden}
+  body{
+    position:relative; background:var(--navy-deep);
+    font-family:var(--font-body); -webkit-font-smoothing:antialiased;
+  }
+  .bleed{position:absolute; inset:0; overflow:hidden; pointer-events:none}
+  .watermark{
+    position:absolute; right:-90px; top:-80px;
+    font-family:var(--font-display); font-style:italic; font-weight:500;
+    font-size:440px; line-height:1; color:rgba(216,184,104,0.06);
+  }
+  .canvas{
+    position:relative; width:608px; height:1080px;
+    padding:144px 52px 146px; display:flex; flex-direction:column;
+    justify-content:space-between;
+  }
+  .logo-slot{display:flex; flex-direction:column; align-items:center; gap:7px; text-align:center}
+  .logo-name{
+    font-family:var(--font-display); font-weight:700; font-size:29px;
+    letter-spacing:5px; color:var(--gold);
+  }
+  .logo-rule{width:82px; height:1px; background:var(--gold)}
+  .logo-office{
+    font-weight:700; font-size:11px; letter-spacing:3px;
+    text-transform:uppercase; color:rgba(250,248,242,0.55);
+  }
+  .head{text-align:center}
+  .eyebrow{
+    font-weight:700; font-size:14px; letter-spacing:4px;
+    text-transform:uppercase; color:var(--gold); margin-bottom:20px;
+  }
+  .headline{
+    font-family:var(--font-display); font-weight:700;
+    font-size:66px; line-height:1.05; letter-spacing:-1px;
+    color:var(--parchment);
+  }
+  .headline .accent{font-style:italic; font-weight:500; color:var(--gold)}
+  .details{width:100%}
+  .detail-row{
+    display:flex; justify-content:space-between; align-items:baseline;
+    padding:20px 4px; border-top:1px solid rgba(216,184,104,0.3);
+  }
+  .detail-row:last-child{border-bottom:1px solid rgba(216,184,104,0.3)}
+  .detail-label{
+    font-weight:700; font-size:12px; letter-spacing:3px;
+    text-transform:uppercase; color:rgba(250,248,242,0.5);
+  }
+  .detail-value{
+    font-family:var(--font-display); font-weight:600;
+    font-size:24px; color:var(--parchment);
+  }
+  .note{
+    text-align:center; font-size:15px; line-height:1.6;
+    color:rgba(250,248,242,0.6); max-width:420px; margin:0 auto;
+  }
+  .footer{display:flex; flex-direction:column; align-items:center; gap:14px}
+  .cta{
+    display:inline-flex; align-items:center; gap:12px;
+    background:var(--burgundy); color:var(--parchment);
+    padding:21px 42px; border-radius:4px;
+    font-weight:700; font-size:15px; letter-spacing:3px; text-transform:uppercase;
+  }
+  .meta{
+    font-weight:600; font-size:11px; letter-spacing:2px;
+    text-transform:uppercase; color:rgba(250,248,242,0.45);
+  }
+</style>
+</head>
+<body class="post">
+  <div class="bleed" aria-hidden="true"><div class="watermark">XIX</div></div>
+  <div class="canvas">
+    <div class="logo-slot">
+      <div class="logo-name">MORSE</div>
+      <div class="logo-rule"></div>
+      <div class="logo-office">For Fourth District Judge</div>
+    </div>
+    <div class="head">
+      <div class="eyebrow">Save the Date</div>
+      <h1 class="headline">Make your <span class="accent">voice heard.</span></h1>
+    </div>
+    <div class="details">
+      <div class="detail-row">
+        <span class="detail-label">Date</span>
+        <span class="detail-value">May 19, 2026</span>
+      </div>
+      <div class="detail-row">
+        <span class="detail-label">Race</span>
+        <span class="detail-value">Fourth District Judge</span>
+      </div>
+      <div class="detail-row">
+        <span class="detail-label">Ballot</span>
+        <span class="detail-value">Open to every voter</span>
+      </div>
+    </div>
+    <p class="note">Early voting and absentee ballot options will be available. Check with your county elections office.</p>
+    <div class="footer">
+      <span class="cta">Pledge Your Vote <span aria-hidden="true">&rarr;</span></span>
+      <span class="meta">Paid for by Morse For Idaho</span>
+    </div>
+  </div>
+
+<style>
+  /* fit-to-viewport: scales the fixed-size post to any window or iframe */
+  html{height:100%;display:block;overflow:hidden}
+  body.post{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%) scale(var(--post-scale,1))}
+</style>
+<script>
+(function(){
+  var fit = function(){
+    var b = document.body
+    document.documentElement.style.setProperty('--post-scale',
+      Math.min(innerWidth / b.offsetWidth, innerHeight / b.offsetHeight, 1))
+  }
+  addEventListener('resize', fit)
+  fit()
+})()
+</script>
+</body>
+</html>

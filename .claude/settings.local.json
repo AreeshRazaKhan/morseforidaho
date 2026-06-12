@@ -97,7 +97,10 @@
       "Bash(tasklist //FI \"IMAGENAME eq chrome.exe\" //FO CSV)",
       "Bash(bash -c 'cd .claude/skills/playwright-skill && TARGET_URL=\"$TARGET_URL\" node run.js \"$PWD/../../../.tmp/psi/perf.js\"')",
       "Bash(npm root *)",
-      "Bash(NODE_PATH=\"../../.claude/skills/playwright-skill/node_modules\" node render.js)"
+      "Bash(NODE_PATH=\"../../.claude/skills/playwright-skill/node_modules\" node render.js)",
+      "PowerShell(try { \\(Get-Command npx\\).Source } catch {}; if \\(Test-Path node_modules\\\\playwright\\) { 'playwright: local' } else { 'playwright: not installed locally' }; try { npx --no-install playwright --version } catch { 'npx playwright not resolvable without install' })",
+      "Bash(mkdir -p public/social-posts)",
+      "Bash(cp social-posts/*.html public/social-posts/)"
     ]
   }
 }

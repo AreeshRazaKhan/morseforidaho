@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>story-08 · Stand for the Bench</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500;1,600&family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#2C3858; --navy-deep:#1F2940; --navy-ink:#141B2C;
+    --burgundy:#681828; --burgundy-deep:#4A0F1B; --burgundy-light:#8B2A3E;
+    --gold:#D8B868; --gold-muted:#A08838; --gold-deep:#7A6828;
+    --parchment:#FAF8F2; --parchment-2:#F2ECDF; --parchment-3:#E7DFC9;
+    --ink:#383028; --ink-soft:#5A5247; --ink-muted:#8A8175;
+    --font-display:'EB Garamond',Georgia,serif;
+    --font-body:'Source Serif 4',Georgia,serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{min-height:100%;background:#141B2C;display:grid;place-items:center;overflow:auto}
+  body{width:608px;height:1080px;overflow:hidden}
+  body{
+    position:relative;
+    background:linear-gradient(160deg,var(--burgundy-deep) 0%,var(--burgundy) 55%,var(--burgundy-light) 130%);
+    font-family:var(--font-body); -webkit-font-smoothing:antialiased;
+  }
+  .bleed{position:absolute; inset:0; overflow:hidden; pointer-events:none}
+  .watermark{
+    position:absolute; left:50%; top:46%; transform:translate(-50%,-50%);
+    font-family:var(--font-display); font-weight:800;
+    font-size:680px; line-height:1; color:rgba(216,184,104,0.06);
+  }
+  .canvas{
+    position:relative; width:608px; height:1080px;
+    padding:144px 56px 146px; display:flex; flex-direction:column;
+    justify-content:space-between; align-items:center; text-align:center;
+  }
+  .logo-slot{display:flex; flex-direction:column; align-items:center; gap:7px}
+  .logo-name{
+    font-family:var(--font-display); font-weight:700; font-size:29px;
+    letter-spacing:5px; color:var(--gold);
+  }
+  .logo-rule{width:82px; height:1px; background:var(--gold)}
+  .logo-office{
+    font-weight:700; font-size:11px; letter-spacing:3px;
+    text-transform:uppercase; color:rgba(250,248,242,0.55);
+  }
+  .stage{display:flex; flex-direction:column; align-items:center}
+  .eyebrow{
+    font-weight:700; font-size:14px; letter-spacing:4px;
+    text-transform:uppercase; color:var(--gold); margin-bottom:26px;
+  }
+  .headline{
+    font-family:var(--font-display); font-weight:700;
+    font-size:80px; line-height:1.04; letter-spacing:-1px;
+    color:var(--parchment); max-width:480px;
+  }
+  .headline .accent{font-style:italic; font-weight:500; color:var(--gold)}
+  .subhead{
+    margin-top:26px; font-size:18px; line-height:1.65;
+    color:rgba(250,248,242,0.75); max-width:420px;
+  }
+  .tiers{
+    width:100%; display:flex;
+    border-top:1px solid rgba(216,184,104,0.35);
+    border-bottom:1px solid rgba(216,184,104,0.35);
+  }
+  .tier{flex:1; padding:18px 6px; display:flex; flex-direction:column; gap:3px}
+  .tier + .tier{border-left:1px solid rgba(216,184,104,0.35)}
+  .tier-amt{
+    font-family:var(--font-display); font-weight:700;
+    font-size:32px; color:var(--parchment);
+  }
+  .tier-name{
+    font-weight:700; font-size:10px; letter-spacing:2px;
+    text-transform:uppercase; color:var(--gold);
+  }
+  .footer{display:flex; flex-direction:column; align-items:center; gap:14px}
+  .cta{
+    display:inline-flex; align-items:center; gap:14px;
+    background:var(--gold); color:var(--navy);
+    padding:22px 52px; border-radius:4px;
+    font-weight:700; font-size:16px; letter-spacing:3px; text-transform:uppercase;
+  }
+  .meta{
+    font-weight:600; font-size:11px; letter-spacing:2px;
+    text-transform:uppercase; color:rgba(250,248,242,0.45);
+  }
+</style>
+</head>
+<body class="post">
+  <div class="bleed" aria-hidden="true"><div class="watermark">M</div></div>
+  <div class="canvas">
+    <div class="logo-slot">
+      <div class="logo-name">MORSE</div>
+      <div class="logo-rule"></div>
+      <div class="logo-office">For Fourth District Judge</div>
+    </div>
+    <div class="stage">
+      <div class="eyebrow">Morse For Idaho · 2026</div>
+      <h1 class="headline">Stand for <span class="accent">the Bench.</span></h1>
+      <p class="subhead">Every dollar fuels our fight for experienced, ethical, and fair leadership on the bench.</p>
+    </div>
+    <div class="tiers">
+      <div class="tier">
+        <span class="tier-amt">$100</span>
+        <span class="tier-name">Seed</span>
+      </div>
+      <div class="tier">
+        <span class="tier-amt">$200</span>
+        <span class="tier-name">Supporter</span>
+      </div>
+      <div class="tier">
+        <span class="tier-amt">$500</span>
+        <span class="tier-name">Sustainer</span>
+      </div>
+    </div>
+    <div class="footer">
+      <span class="cta">Donate <span aria-hidden="true">&rarr;</span></span>
+      <span class="meta">Paid for by Morse For Idaho</span>
+    </div>
+  </div>
+
+<style>
+  /* fit-to-viewport: scales the fixed-size post to any window or iframe */
+  html{height:100%;display:block;overflow:hidden}
+  body.post{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%) scale(var(--post-scale,1))}
+</style>
+<script>
+(function(){
+  var fit = function(){
+    var b = document.body
+    document.documentElement.style.setProperty('--post-scale',
+      Math.min(innerWidth / b.offsetWidth, innerHeight / b.offsetHeight, 1))
+  }
+  addEventListener('resize', fit)
+  fit()
+})()
+</script>
+</body>
+</html>
