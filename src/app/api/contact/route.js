@@ -1,3 +1,4 @@
+import { isCompletePhone } from '@/lib/format-phone'
 import { nowIso, postA2PWebhook, yesNo } from '@/lib/ghl'
 
 // Full URL hardcoded — Morse account uses a location-scoped hook ID
@@ -12,9 +13,15 @@ export const POST = async (req) => {
     const lastName = (data.lastName || '').trim()
     const email = (data.email || '').trim()
     const message = (data.message || '').trim()
+    const phone = (data.phone || '').trim()
 
     if (!firstName || !lastName || !email || !message) {
       return Response.json({ error: 'Missing required fields' }, { status: 400 })
+    }
+    // Phone is optional, but a partial number must never reach GHL — the UI
+    // gate is not the source of truth for a direct API hit.
+    if (phone && !isCompletePhone(phone)) {
+      return Response.json({ error: 'Incomplete phone number' }, { status: 400 })
     }
 
     const payload = {
@@ -22,7 +29,7 @@ export const POST = async (req) => {
       firstName,
       lastName,
       email,
-      phone: (data.phone || '').trim(),
+      phone,
       message,
       sms_updates: yesNo(data.sms_updates),
       sms_promo: 'No',

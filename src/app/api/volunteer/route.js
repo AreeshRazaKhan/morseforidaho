@@ -1,3 +1,4 @@
+import { isCompletePhone } from '@/lib/format-phone'
 import { nowIso, postA2PWebhook, yesNo } from '@/lib/ghl'
 
 // Three parallel webhooks per rule §2. Each triggers a different GHL
@@ -15,9 +16,15 @@ export const POST = async (req) => {
     const firstName = (data.firstName || '').trim()
     const lastName = (data.lastName || '').trim()
     const email = (data.email || '').trim()
+    const phone = (data.phone || '').trim()
 
     if (!firstName || !lastName || !email) {
       return Response.json({ error: 'Missing required fields' }, { status: 400 })
+    }
+    // Phone is optional, but a partial number must never reach GHL — the UI
+    // gate is not the source of truth for a direct API hit.
+    if (phone && !isCompletePhone(phone)) {
+      return Response.json({ error: 'Incomplete phone number' }, { status: 400 })
     }
 
     // helpOptions is a multi-select → comma-separated string per rule §2.
@@ -31,7 +38,7 @@ export const POST = async (req) => {
       firstName,
       lastName,
       email,
-      phone: (data.phone || '').trim(),
+      phone,
       zipCode: (data.zipCode || '').trim(),
       county: (data.county || '').trim(),
       region: (data.region || '').trim(),

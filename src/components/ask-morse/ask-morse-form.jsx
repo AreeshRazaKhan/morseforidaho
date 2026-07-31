@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { useState } from 'react'
 
 import SmsConsentText from '@/components/ui/sms-consent'
-import { formatPhone } from '@/lib/format-phone'
+import { formatPhone, isCompletePhone } from '@/lib/format-phone'
 
 const TOPICS = [
   'Judicial Philosophy',
@@ -58,6 +58,9 @@ const AskMorseForm = () => {
     if (!form.category) next.category = 'Pick a topic'
     if (!form.subject.trim()) next.subject = 'Required'
     if (!form.description.trim()) next.description = 'Required'
+    if (form.phone.trim() && !isCompletePhone(form.phone)) {
+      next.phone = 'Enter a complete 10-digit phone number'
+    }
     if (form.phone.trim() && !form.sms_updates) {
       next.sms_updates = 'SMS consent is required when a phone number is provided'
     }
@@ -180,6 +183,7 @@ const AskMorseForm = () => {
               placeholder="+1 (208) 555-0199"
               disabled={status === 'submitting'}
             />
+            {errors.phone && <span className="mt-1 block text-[12px] text-burgundy-light">{errors.phone}</span>}
           </label>
           <label className="block">
             <span className="flex items-center gap-2 text-[12px] tracking-[2px] uppercase text-gold-muted font-bold">

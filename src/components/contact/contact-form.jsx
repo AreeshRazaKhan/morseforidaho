@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { useState } from 'react'
 
 import SmsConsentText from '@/components/ui/sms-consent'
-import { formatPhone } from '@/lib/format-phone'
+import { formatPhone, isCompletePhone } from '@/lib/format-phone'
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 
@@ -42,6 +42,9 @@ const ContactForm = () => {
     if (!form.email.trim()) next.email = 'Required'
     else if (!EMAIL_RE.test(form.email.trim())) next.email = 'Invalid email'
     if (!form.message.trim()) next.message = 'Required'
+    if (form.phone.trim() && !isCompletePhone(form.phone)) {
+      next.phone = 'Enter a complete 10-digit phone number'
+    }
     if (form.phone.trim() && !form.sms_updates) {
       next.sms_updates = 'SMS consent is required when a phone number is provided'
     }
@@ -186,6 +189,7 @@ const ContactForm = () => {
               placeholder="+1 (208) 555-0199"
               disabled={status === 'submitting'}
             />
+            {errors.phone && <span className="mt-1 block text-[12px] text-burgundy-light">{errors.phone}</span>}
           </label>
         </div>
 

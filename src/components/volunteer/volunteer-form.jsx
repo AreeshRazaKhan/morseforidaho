@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { useState } from 'react'
 
 import SmsConsentText from '@/components/ui/sms-consent'
-import { formatPhone } from '@/lib/format-phone'
+import { formatPhone, isCompletePhone } from '@/lib/format-phone'
 
 // Values below are locked to .claude/rules/ghl-forms-webhooks.md §2.
 // Do not edit the string values without updating the GHL workflow tags.
@@ -115,6 +115,9 @@ const VolunteerForm = () => {
     if (form.helpOptions.length === 0) next.helpOptions = 'Pick at least one'
     if (!form.availability) next.availability = 'Required'
     if (!form.issues.trim()) next.issues = 'Required'
+    if (form.phone.trim() && !isCompletePhone(form.phone)) {
+      next.phone = 'Enter a complete 10-digit phone number'
+    }
     if (form.phone.trim() && !form.sms_updates) {
       next.sms_updates = 'SMS consent is required when a phone number is provided'
     }
@@ -220,6 +223,7 @@ const VolunteerForm = () => {
             </span>
             <input type="tel" name="phone" value={form.phone} onChange={onChange}
               className={fieldClass('phone')} placeholder="+1 (208) 555-0199" disabled={status === 'submitting'} />
+            {errors.phone && <span className="mt-1 block text-[12px] text-burgundy-light">{errors.phone}</span>}
           </label>
         </div>
 

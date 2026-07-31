@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import { useState } from 'react'
 
 import SmsConsentText from '@/components/ui/sms-consent'
-import { formatPhone } from '@/lib/format-phone'
+import { formatPhone, isCompletePhone } from '@/lib/format-phone'
 
 // GHL rule §4 lists only First Name, Last Name, Email, Contact Number.
 // The A2P 10DLC SOP (Operation 1776) requires both SMS consent checkboxes
@@ -49,6 +49,9 @@ const RsvpForm = ({ event }) => {
     if (!form.lastName.trim()) next.lastName = 'Required'
     if (!form.email.trim()) next.email = 'Required'
     else if (!EMAIL_RE.test(form.email.trim())) next.email = 'Invalid email'
+    if (form.phone.trim() && !isCompletePhone(form.phone)) {
+      next.phone = 'Enter a complete 10-digit phone number'
+    }
     if (form.phone.trim() && !form.sms_updates) {
       next.sms_updates = 'SMS consent is required when a phone number is provided'
     }
@@ -196,6 +199,7 @@ const RsvpForm = ({ event }) => {
             placeholder="+1 (503) 555-1234"
             disabled={status === 'submitting'}
           />
+          {errors.phone && <span className="mt-1 block text-[12px] text-burgundy-light">{errors.phone}</span>}
         </label>
 
         <fieldset className="pt-2">

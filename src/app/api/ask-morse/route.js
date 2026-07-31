@@ -1,3 +1,4 @@
+import { isCompletePhone } from '@/lib/format-phone'
 import { nowIso, postA2PWebhook, yesNo } from '@/lib/ghl'
 
 // Per .claude/rules/ghl-forms-webhooks.md the Ask Morse form is the
@@ -14,9 +15,15 @@ export const POST = async (req) => {
     const email = (data.email || '').trim()
     const subject = (data.subject || '').trim()
     const description = (data.description || '').trim()
+    const phone = (data.phone || '').trim()
 
     if (!name || !email || !subject || !description) {
       return Response.json({ error: 'Missing required fields' }, { status: 400 })
+    }
+    // Phone is optional, but a partial number must never reach GHL — the UI
+    // gate is not the source of truth for a direct API hit.
+    if (phone && !isCompletePhone(phone)) {
+      return Response.json({ error: 'Incomplete phone number' }, { status: 400 })
     }
 
     const parts = name.split(/\s+/)
@@ -28,7 +35,7 @@ export const POST = async (req) => {
       firstName,
       lastName,
       email,
-      phone: (data.phone || '').trim(),
+      phone,
       issue_category: (data.category || '').trim(),
       issue_location: (data.location || '').trim(),
       issue_subject: subject,
